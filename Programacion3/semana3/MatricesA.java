@@ -1,5 +1,6 @@
 public class MatricesA
- {
+{
+
     public static void main(String[] args)
     {
 
@@ -11,10 +12,26 @@ public class MatricesA
 
         //Recorrido de la matriz
         for (int i = 0; i < m[0].length; i++){
-            for (int j = 0; j < m[0].length; j++){
-                System.out.println("m[" + i + "][" + j + "]=" + m[i][j]);
+            for (int j = 0; j < m[0].length; j++){ // m[0] hace refencia a las columnas
+                //System.out.println("m[" + i + "][" + j + "]=" + m[i][j]);
             }
         }
+
+        //Visualizar de mejor manera la matriz
+
+        String cad = "";
+        for (int i = 0; i < m[0].length; i++)
+        {
+            for (int j = 0; j < m[0].length; j++)
+            {
+                cad += "|" + m[i][j];
+            }
+
+              cad += "| \n";
+        }  
+        System.out.println(cad);
+
+
 
     }
 
