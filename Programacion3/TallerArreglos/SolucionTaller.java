@@ -85,5 +85,21 @@ public class SolucionTaller
             }
             System.out.println("el numero menor es: " + menor +"\n"+
                                 "el numero mayor es: " + mayor );
+
+            int rma = 0;
+            int rme = 0;
+
+            for ( int i = 0 ; i<j.length; i++)
+                {
+                    if(j[i] == mayor){
+                        rma++;
+                    }
+                    if(j[i] == menor){
+                        rme++;
+                    }
+                }
+
+            System.out.println("el numeor menor se repite "+ rme + " veces\n" +
+                                "el numero mayor se repite "+ rma + " veces");
     }
 }
