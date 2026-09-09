@@ -99,7 +99,7 @@ public class SolucionTaller
                     }
                 }
 
-            System.out.println("el numeor menor se repite "+ rme + " veces\n" +
+            System.out.println("el numero menor se repite "+ rme + " veces\n" +
                                 "el numero mayor se repite "+ rma + " veces");*/
 
 
@@ -109,14 +109,14 @@ public class SolucionTaller
         int [] l = new int [1];
 
         int max = 20;
-         int min =1;
+        int min =1;
 
         for (int i = 0; i < k.length; i++)
             {
                 k[i]= (int) (Math.random() *(max - min +1)) + min;
 
-
             }
+
 
              for (int i = 0; i < k.length; i++)
             {
@@ -135,17 +135,14 @@ public class SolucionTaller
 
             int repite = 0;
 
-             for ( int i = 0 ; i<k.length; i++)
+             for ( int i = 0 ; i < k.length; i++)
                 {
-                    if(k[i] == l[i]){
+                    if(l[i] == k[i]){
                         repite++;
-                   
+                    }
                 }
-
-            System.out.println("el numeor se repite "+ repite + " veces");
-
-        }
-
+    
+            System.out.println("el numero se repite "+ repite + " veces");
 
 
 
