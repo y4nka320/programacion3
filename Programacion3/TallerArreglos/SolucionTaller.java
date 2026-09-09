@@ -73,7 +73,17 @@ public class SolucionTaller
 
          for (int i = 1; i < j.length; i++)
             {
-                if(j[])
+                if(j[i] > mayor){
+                    mayor = j[i];
+                }
+
+                if(j[i] < menor){
+                    menor = j[i];
+                }
+
+
             }
+            System.out.println("el numero menor es: " + menor +"\n"+
+                                "el numero mayor es: " + mayor );
     }
 }
