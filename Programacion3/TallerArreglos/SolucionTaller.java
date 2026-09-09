@@ -133,7 +133,18 @@ public class SolucionTaller
                 System.out.println("l[" + i + "]=" + l[i]);
             }
 
+            int repite = 0;
 
+             for ( int i = 0 ; i<k.length; i++)
+                {
+                    if(k[i] == l[i]){
+                        repite++;
+                   
+                }
+
+            System.out.println("el numeor se repite "+ repite + " veces");
+
+        }
 
 
 
