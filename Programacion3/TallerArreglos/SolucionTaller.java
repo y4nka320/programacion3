@@ -51,7 +51,7 @@ public class SolucionTaller
 
         //punto 8 del taller
 
-        int[] j = new int [30];
+       /*  int[] j = new int [30];
 
          int max = 100;
          int min =1;
@@ -100,6 +100,43 @@ public class SolucionTaller
                 }
 
             System.out.println("el numeor menor se repite "+ rme + " veces\n" +
-                                "el numero mayor se repite "+ rma + " veces");
+                                "el numero mayor se repite "+ rma + " veces");*/
+
+
+        //punto 9 del taller
+
+        int [] k = new int [20];
+        int [] l = new int [1];
+
+        int max = 20;
+         int min =1;
+
+        for (int i = 0; i < k.length; i++)
+            {
+                k[i]= (int) (Math.random() *(max - min +1)) + min;
+
+
+            }
+
+             for (int i = 0; i < k.length; i++)
+            {
+                System.out.println("k[" + i + "]=" + k[i]);
+            }
+
+            for (int i = 0; i < l.length; i++)
+            {
+                l[i]= (int) (Math.random() *(max - min +1)) + min;
+
+            }
+             for (int i = 0; i < l.length; i++)
+            {
+                System.out.println("l[" + i + "]=" + l[i]);
+            }
+
+
+
+
+
+
     }
 }
