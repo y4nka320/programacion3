@@ -5,7 +5,10 @@ public class SolucionTaller
     public static void main (String[] arg)
     {
 
-        int[] a = {2, 3, 7, 6, 12, 27, 21, 33, 24, 18};
+
+        //punto 7 del taller
+
+        /*int[] a = {2, 3, 7, 6, 12, 27, 21, 33, 24, 18};
         
         int[] b = new int[a.length]; 
         int[] c = new int[a.length];
@@ -43,7 +46,34 @@ public class SolucionTaller
                 for (int i = 0; i < posc; i++)
                 {
                     System.out.println("c[" + c[i] +"]");
-                }
+                }   */
 
+
+        //punto 8 del taller
+
+        int[] j = new int [30];
+
+         int max = 100;
+         int min =1;
+
+        for (int i = 0; i < j.length; i++)
+            {
+                j[i]= (int) (Math.random() *(max - min +1)) + min;
+
+
+            }
+
+             for (int i = 0; i < j.length; i++)
+            {
+                System.out.println("j[" + i + "]=" + j[i]);
+            }
+
+        int mayor = j[0];
+        int menor = j[0];
+
+         for (int i = 1; i < j.length; i++)
+            {
+                if(j[])
+            }
     }
 }
