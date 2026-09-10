@@ -106,7 +106,7 @@ public class SolucionTaller
         //punto 9 del taller
 
         int [] k = new int [20];
-        int [] l = new int [1];
+        int l = 0;
 
         int max = 20;
         int min =1;
@@ -123,21 +123,19 @@ public class SolucionTaller
                 System.out.println("k[" + i + "]=" + k[i]);
             }
 
-            for (int i = 0; i < l.length; i++)
-            {
-                l[i]= (int) (Math.random() *(max - min +1)) + min;
+            
+                l= (int) (Math.random() *(max - min +1)) + min;
 
-            }
-             for (int i = 0; i < l.length; i++)
-            {
-                System.out.println("l[" + i + "]=" + l[i]);
-            }
+            
+             
+                System.out.println("l = " + l );
+            
 
             int repite = 0;
 
              for ( int i = 0 ; i < k.length; i++)
                 {
-                    if(l[i] == k[i]){
+                    if(l == k[i]){
                         repite++;
                     }
                 }
