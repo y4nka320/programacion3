@@ -151,7 +151,7 @@ public class SolucionTaller
         int [] q = new int[(p.length + 1) / 2];
 
         for (int i = 0; i < p.length/2; i++){
-            q[i] = p[i] + p[p.length + 1 - i];
+            q[i] = p[i] + p[p.length - 1 - i];
         }
 
         // Si A tiene cantidad impar, guardamos el centro
