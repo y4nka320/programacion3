@@ -105,7 +105,7 @@ public class SolucionTaller
 
         //punto 9 del taller
 
-        int [] k = new int [20];
+       /*  int [] k = new int [20];
         int l = 0;
 
         int max = 20;
@@ -140,7 +140,36 @@ public class SolucionTaller
                     }
                 }
     
-            System.out.println("el numero se repite "+ repite + " veces");
+            System.out.println("el numero se repite "+ repite + " veces");*/
+
+
+
+        // punto 10 del taller
+
+        int [] p = {15, 9, 0, 7, 8, 3, 1};
+        //int [] p = {8, 9, 4, 3, 20, 5}; esto para cuando los elemtos de p son pares
+        int [] q = new int[(p.length + 1) / 2];
+
+        for (int i = 0; i < p.length/2; i++){
+            q[i] = p[i] + p[p.length + 1 - i];
+        }
+
+        // Si A tiene cantidad impar, guardamos el centro
+        if (p.length % 2 != 0) {
+            q[q.length - 1] = p[p.length / 2];
+        }
+
+        for (int i = 0; i < p.length; i++)
+                {
+                    System.out.println("la suma de los elemtos opuestos de p[" + p[i] +"]");
+                }
+
+        for (int i = 0; i < q.length; i++)
+                {
+                    System.out.println("es = q[" + q[i] +"]");
+                }
+
+
 
 
 
