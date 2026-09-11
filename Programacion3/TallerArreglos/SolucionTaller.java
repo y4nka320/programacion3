@@ -5,7 +5,6 @@ public class SolucionTaller
     public static void main (String[] arg)
     {
 
-
         //punto 7 del taller
 
         /*int[] a = {2, 3, 7, 6, 12, 27, 21, 33, 24, 18};
@@ -29,9 +28,7 @@ public class SolucionTaller
                 posc++;
 
             }
-               
-
-
+            
         }
 
             System.out.println("los numeros pares son:\n");
@@ -236,7 +233,6 @@ public class SolucionTaller
                 h[posh] = i;
                 posh++;
             }
-
         }
 
         for (int i = 0; i < w.length; i++){
@@ -309,15 +305,6 @@ public class SolucionTaller
          for (int i = 0; i < posf; i++){
             System.out.print( f[i] + ", " );
         }
-
-
-
-
-
-
-
-
-
 
     }
 }
