@@ -3,7 +3,9 @@ public class SolucionMatrices
     
     public static void main(String[] args) 
     {
-         int [][] m = {{2, 21, 15}, 
+
+        //punto 17 del taller
+        /*  int [][] m = {{2, 21, 15}, 
                       {8, 5, 12}, 
                       {1, 4, 3}};
 
@@ -18,7 +20,7 @@ public class SolucionMatrices
 
               cad += "| \n";
         }  
-        System.out.println(cad);
+        System.out.println(cad);  //me imprime la matriz original
         
         for (int i = 0; i < m.length; i++) {
 
@@ -40,8 +42,26 @@ public class SolucionMatrices
             }
 
             System.out.println("Suma de la columna " + j + ": " + suma);
-        }
+        } */
+
+        //punto 18 del taller
         
+        int[][] tabla = new int[10][10];
+
+        
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                tabla[i][j] = (i + 1) * (j + 1);
+            }
+        }
+
+        
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                System.out.print(tabla[i][j] + "\t");
+            }
+            System.out.println();
+        }
 
     }
 }
