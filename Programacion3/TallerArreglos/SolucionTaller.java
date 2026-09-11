@@ -246,7 +246,7 @@ public class SolucionTaller
         System.out.println("los indices de x=2 : ");
 
          for (int i = 0; i < posh; i++){
-            System.out.println("h[" + i + "]");
+            System.out.println("h[" + h[i] + "]");
         }
 
 
