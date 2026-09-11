@@ -172,7 +172,7 @@ public class SolucionTaller
 
         //punto 11 del taller 
 
-        int[] e = {12, -3, 0, -6,-19, 4, 1, 6};
+       /*  int[] e = {12, -3, 0, -6,-19, 4, 1, 6};
         int[] n = new int[e.length]; 
         int[] v = new int[e.length];
         int[] o = new int[e.length];
@@ -200,25 +200,58 @@ public class SolucionTaller
 
         }
 
+        System.out.println("el arreglo original es: ");
         for (int i = 0; i < e.length; i++){
             System.out.println("e[" + e[i] + "] ");
         }
 
-        System.out.println("los numeros positivos son: \n");
+        System.out.println("los numeros positivos son: ");
         for ( int i = 0; i < posv; i++){
-            System.out.println("v[" + v[i] + "]");
+            System.out.println("v[" + v[i] + "]\n");
         }
 
 
-        System.out.println("los numeros negativos son: \n");
+        System.out.println("los numeros negativos son: ");
         for (int i = 0; i < posn; i++){
-            System.out.println("n["+ n[i] + "]");
+            System.out.println("n["+ n[i] + "]\n");
         }
 
+        System.out.println("arreglo con el numero: ");
+        for (int i = 0; i < poso; i++){
+            System.out.println("o["+ o[i] + "]\n");
+        }*/
 
+
+        //punto 12 del taller
+        int []w= {4,5,2,6,2,0,8,9,1,3,2,7};
+        int x = 2;
+        int []h= new int [w.length];
+        int posh = 0;
+
+        System.out.println("el arreglo w: ");
+
+        for (int i = 0; i < w.length; i++ ){
+
+            if( w[i] == x){
+                h[posh] = i;
+                posh++;
+            }
+
+        }
+
+        for (int i = 0; i < w.length; i++){
+            System.out.println("w["+ w[i] + "]");
+        }
+
+        System.out.println("los indices de x=2 : ");
+
+         for (int i = 0; i < posh; i++){
+            System.out.println("h[" + i + "]");
+        }
 
 
 
 
     }
 }
+
