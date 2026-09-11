@@ -146,7 +146,7 @@ public class SolucionTaller
 
         // punto 10 del taller
 
-        int [] p = {15, 9, 0, 7, 8, 3, 1};
+       /*  int [] p = {15, 9, 0, 7, 8, 3, 1};
         //int [] p = {8, 9, 4, 3, 20, 5}; esto para cuando los elemtos de p son pares
         int [] q = new int[(p.length + 1) / 2];
 
@@ -167,7 +167,52 @@ public class SolucionTaller
         for (int i = 0; i < q.length; i++)
                 {
                     System.out.println("es = q[" + q[i] +"]");
-                }
+                }*/
+
+
+        //punto 11 del taller 
+
+        int[] e = {12, -3, 0, -6,-19, 4, 1, 6};
+        int[] n = new int[e.length]; 
+        int[] v = new int[e.length];
+        int[] o = new int[e.length];
+
+        int posn = 0;
+        int posv = 0;
+        int poso = 0;
+
+        for (int i = 0; i < e.length; i++ ){
+
+            if( e[i] < 0){
+                n[posn] = e[i];
+                posn++;
+            }else{ (e[i] > 0){
+                v[posv] = e[i];
+                posv++;
+            }
+            } else{ (e[i] == 0){
+                o[poso] = e[i];
+                poso++;
+            }
+            }
+
+        }
+
+        for (int i = 0; i < e.length; i++){
+            System.out.println("e[" + e[i] + "] ");
+        }
+
+        System.out.println("los numeros positivos son: \n");
+        for ( int i = 0; i < v.length; i++){
+            System.out.println("v[" + v[i] + "]");
+        }
+
+
+        System.out.println("los numeros negativos son: \n");
+        for (int i = 0; i < n.length; i++){
+            System.out.println("n["+ n[i] + "]");
+        }
+
 
 
 
