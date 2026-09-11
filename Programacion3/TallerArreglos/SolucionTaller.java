@@ -253,12 +253,17 @@ public class SolucionTaller
 
         //punto 13 del taller
 
-        int [] y = new int [20];
+        int []y = new int [20];
         int []g= new int [y.length];
         int []f= new int [y.length];
 
-         int max = 20;
+        int posg = 0;
+        int posf = 0;
+
+        int max = 20;
         int min =1;
+        int media = 0;
+        int suma = 0;
 
         for (int i = 0; i < y.length; i++)
             {
@@ -266,7 +271,48 @@ public class SolucionTaller
 
             }    
             
-            
+        for ( int i = 0; i < y.length; i++)
+            {
+                suma = suma + y[i];
+            }
+         
+        media = (suma/20);
+
+        for (int i = 0; i < y.length; i++)
+        {
+             if( y[i] < media){
+                g[posg] = y[i];
+                posg++;
+            }else{
+
+                 f[posf] = y[i];
+                posf++;
+
+            }
+        }
+
+        System.out.println(" la media es: " + media);
+
+        System.out.print(" el arreglo y[");
+         for (int i = 0; i < y.length; i++){
+            System.out.print( y[i] + ", " );
+        }
+
+        System.out.println("");
+        System.out.print("el arreglo de los menores g[");
+         for (int i = 0; i < posg; i++){
+            System.out.print( g[i] + ", " );
+        }
+
+        System.out.println("");
+        System.out.print("el arreglo de los mayores f[");
+         for (int i = 0; i < posf; i++){
+            System.out.print( f[i] + ", " );
+        }
+
+
+
+
 
 
 
