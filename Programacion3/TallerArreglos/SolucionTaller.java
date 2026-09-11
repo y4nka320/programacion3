@@ -186,14 +186,16 @@ public class SolucionTaller
             if( e[i] < 0){
                 n[posn] = e[i];
                 posn++;
-            }else{ (e[i] > 0){
+            }
+
+            if (e[i] > 0){
                 v[posv] = e[i];
                 posv++;
             }
-            } else{ (e[i] == 0){
+
+            if (e[i] == 0){
                 o[poso] = e[i];
                 poso++;
-            }
             }
 
         }
@@ -203,13 +205,13 @@ public class SolucionTaller
         }
 
         System.out.println("los numeros positivos son: \n");
-        for ( int i = 0; i < v.length; i++){
+        for ( int i = 0; i < posv; i++){
             System.out.println("v[" + v[i] + "]");
         }
 
 
         System.out.println("los numeros negativos son: \n");
-        for (int i = 0; i < n.length; i++){
+        for (int i = 0; i < posn; i++){
             System.out.println("n["+ n[i] + "]");
         }
 
