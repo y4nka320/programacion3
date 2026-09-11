@@ -216,19 +216,19 @@ public class SolucionTaller
             System.out.println("n["+ n[i] + "]\n");
         }
 
-        System.out.println("arreglo con el numero: ");
+        System.out.println("arreglo con el numero: ");   //tengo que mejorar la impresion del arreglo para que se vea bonito
         for (int i = 0; i < poso; i++){
             System.out.println("o["+ o[i] + "]\n");
         }*/
 
 
         //punto 12 del taller
-        int []w= {4,5,2,6,2,0,8,9,1,3,2,7};
+       /*  int []w= {4,5,2,6,2,0,8,9,1,3,2,7};
         int x = 2;
         int []h= new int [w.length];
         int posh = 0;
 
-        System.out.println("el arreglo w: ");
+        System.out.print("el arreglo w[");
 
         for (int i = 0; i < w.length; i++ ){
 
@@ -240,14 +240,35 @@ public class SolucionTaller
         }
 
         for (int i = 0; i < w.length; i++){
-            System.out.println("w["+ w[i] + "]");
+            System.out.print( w[i] + ", " );
         }
 
-        System.out.println("los indices de x=2 : ");
+        System.out.println("");
+
+        System.out.println("los indices de x=2 : ");  //aca tambien debo mejorar la impresio, bueno con todos 
 
          for (int i = 0; i < posh; i++){
             System.out.println("h[" + h[i] + "]");
-        }
+        }*/
+
+        //punto 13 del taller
+
+        int [] y = new int [20];
+        int []g= new int [y.length];
+        int []f= new int [y.length];
+
+         int max = 20;
+        int min =1;
+
+        for (int i = 0; i < y.length; i++)
+            {
+                y[i]= (int) (Math.random() *(max - min +1)) + min;
+
+            }    
+            
+            
+
+
 
 
 
