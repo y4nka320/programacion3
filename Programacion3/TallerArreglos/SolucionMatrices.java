@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class SolucionMatrices 
 {
     
@@ -126,7 +128,7 @@ public class SolucionMatrices
 
         //punto 21 del taller
 
-        int m = 4;
+        /*int m = 4;
         int[][] a = {{2, 4, 5, 9}, 
                      {8, 5, 7, 1}, 
                      {1, 4, 3, 8},
@@ -164,12 +166,38 @@ public class SolucionMatrices
         for (int i = 0; i < m; i++)
         {
             System.out.print( b[i] + " " );
+        }*/
+
+
+        // punto 22 del taller
+
+        Scanner poner = new Scanner(System.in);
+
+        System.out.print("Ingrese el número de filas: ");
+        int filas = poner.nextInt();
+
+         System.out.print("Ingrese el número de columnas: ");
+        int columnas = poner.nextInt();
+
+        int [][] t = new int[filas][columnas];
+         
+        String cad = "";
+        for (int i = 0; i < filas; i++)
+        {
+            for (int j = 0; j < columnas; j++){
+                cad += "|" + t[i][j];
+            }
+
+              cad += "| \n";
         }
+          
 
-         // punto 22 del taller
+            System.out.println(cad);
 
+      
         
 
+        
 
     }
 }
