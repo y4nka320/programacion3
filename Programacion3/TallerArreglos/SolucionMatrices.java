@@ -227,9 +227,11 @@ public class SolucionMatrices
             }
         }
 
+        System.out.println("\n El numero mayor es: " + mayor);
+        System.out.println( "Posicion del numero mayor: [" + filap + "][" + columnap + "]");
         
-        
-        
+         System.out.println("\n El numero menor es: " + menor);
+        System.out.println( "Posicion del numero menor: [" + filap + "][" + columnap + "]");
 
     }
 }
