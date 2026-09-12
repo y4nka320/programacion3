@@ -143,7 +143,7 @@ public class SolucionTaller
 
         // punto 10 del taller
 
-       /*  int [] p = {15, 9, 0, 7, 8, 3, 1};
+         /*t [] p = {15, 9, 0, 7, 8, 3, 1};
         //int [] p = {8, 9, 4, 3, 20, 5}; esto para cuando los elemtos de p son pares
         int [] q = new int[(p.length + 1) / 2];
 
@@ -169,7 +169,7 @@ public class SolucionTaller
 
         //punto 11 del taller 
 
-       /*  int[] e = {12, -3, 0, -6,-19, 4, 1, 6};
+        /*  int[] e = {12, -3, 0, -6,-19, 4, 1, 6};
         int[] n = new int[e.length]; 
         int[] v = new int[e.length];
         int[] o = new int[e.length];
@@ -220,7 +220,7 @@ public class SolucionTaller
 
 
         //punto 12 del taller
-       /*  int []w= {4,5,2,6,2,0,8,9,1,3,2,7};
+       /*   int []w= {4,5,2,6,2,0,8,9,1,3,2,7};
         int x = 2;
         int []h= new int [w.length];
         int posh = 0;
@@ -249,7 +249,7 @@ public class SolucionTaller
 
         //punto 13 del taller
 
-        int []y = new int [20];
+        /*int []y = new int [20];
         int []g= new int [y.length];
         int []f= new int [y.length];
 
@@ -304,7 +304,7 @@ public class SolucionTaller
         System.out.print("el arreglo de los mayores f[");
          for (int i = 0; i < posf; i++){
             System.out.print( f[i] + ", " );
-        }
+        }*/
 
     }
 }

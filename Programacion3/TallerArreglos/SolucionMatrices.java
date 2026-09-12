@@ -5,12 +5,12 @@ public class SolucionMatrices
     {
 
         //punto 17 del taller
-        /*  int [][] m = {{2, 21, 15}, 
-                      {8, 5, 12}, 
-                      {1, 4, 3}};
+       /*  int [][] m = {{2, 21, 15}, 
+                         {8, 5, 12}, 
+                         {1, 4, 3}};
 
 
-         String cad = "";
+              String cad = "";
         for (int i = 0; i < m[0].length; i++)
         {
             for (int j = 0; j < m[0].length; j++)
@@ -46,7 +46,7 @@ public class SolucionMatrices
 
         //punto 18 del taller
         
-        int[][] tabla = new int[10][10];
+        /*int[][] tabla = new int[10][10];
 
         
         for (int i = 0; i < 10; i++) {
@@ -61,7 +61,39 @@ public class SolucionMatrices
                 System.out.print(tabla[i][j] + "\t");
             }
             System.out.println();
+        }*/
+
+        // punto 19 del taller
+
+        int n = 4;
+        int m = 4;
+
+        int[][] a = new int[n][m];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+
+                if (i == j) {
+                    a[i][j] = 1;      
+                }else {
+                    a[i][j] = 0;
+                }
+            }
         }
+
+        String cad = "";
+        for (int i = 0; i < a[0].length; i++)
+        {
+            for (int j = 0; j < a[0].length; j++)
+            {
+                cad += "|" + a[i][j];
+            }
+
+              cad += "| \n";
+        }  
+        System.out.println(cad);
+
+        // punto 20 dle taller
 
     }
 }
