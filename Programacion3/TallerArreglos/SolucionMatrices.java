@@ -207,8 +207,11 @@ public class SolucionMatrices
         int mayor = t[0][0];
         int menor = t[0][0];
 
-        int filap = 0;
-        int columnap = 0;
+        int filama = 0;
+        int columnama = 0;
+
+         int filame = 0;
+        int columname = 0;
 
         for (int i = 0; i < filas ; i++)
         {
@@ -216,22 +219,22 @@ public class SolucionMatrices
             {
                 if (t[i][j] > mayor){
                     mayor = t[i][j];
-                    filap = i;
-                    columnap = j;
+                    filama = i;
+                    columnama = j;
                 }
                 if(t[i][j] < menor){
                     menor = t[i][j];
-                    filap = i;
-                    columnap = j;
+                    filame = i;
+                    columname = j;
                 }
             }
         }
 
         System.out.println("\n El numero mayor es: " + mayor);
-        System.out.println( "Posicion del numero mayor: [" + filap + "][" + columnap + "]");
+        System.out.println( "Posicion del numero mayor: [" + filama + "][" + columnama + "]");
         
          System.out.println("\n El numero menor es: " + menor);
-        System.out.println( "Posicion del numero menor: [" + filap + "][" + columnap + "]");
+        System.out.println( "Posicion del numero menor: [" + filame + "][" + columname + "]");
 
     }
 }
