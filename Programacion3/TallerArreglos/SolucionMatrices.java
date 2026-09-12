@@ -93,7 +93,8 @@ public class SolucionMatrices
         }  
         System.out.println(cad);
 
-        // punto 20 dle taller
+        // punto 20 dle taller 
+        
 
     }
 }
