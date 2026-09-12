@@ -181,6 +181,16 @@ public class SolucionMatrices
 
         int [][] t = new int[filas][columnas];
          
+        for (int i = 0 ; i < filas; i++)
+        {
+            for (int j = 0; j < columnas; j++)
+            {
+                System.out.println("t[" + i +"][" + j + "]: ");
+                t[i][j]=poner.nextInt();
+            }
+        }
+
+
         String cad = "";
         for (int i = 0; i < filas; i++)
         {
@@ -192,11 +202,33 @@ public class SolucionMatrices
         }
           
 
-            System.out.println(cad);
+        System.out.println(cad);
 
-      
+        int mayor = t[0][0];
+        int menor = t[0][0];
+
+        int filap = 0;
+        int columnap = 0;
+
+        for (int i = 0; i < filas ; i++)
+        {
+            for ( int j = 0; j < columnas; j++)
+            {
+                if (t[i][j] > mayor){
+                    mayor = t[i][j];
+                    filap = i;
+                    columnap = j;
+                }
+                if(t[i][j] < menor){
+                    menor = t[i][j];
+                    filap = i;
+                    columnap = j;
+                }
+            }
+        }
+
         
-
+        
         
 
     }
