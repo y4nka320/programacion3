@@ -65,7 +65,7 @@ public class SolucionMatrices
 
         // punto 19 del taller
 
-        int n = 4;
+       /*  int n = 4;
         int m = 4;
 
         int[][] a = new int[n][m];
@@ -91,10 +91,38 @@ public class SolucionMatrices
 
               cad += "| \n";
         }  
-        System.out.println(cad);
+        System.out.println(cad);*/
 
         // punto 20 dle taller 
-        
+
+        int n = 10;
+        int m = 10;
+        int [][] a = new int [n][m];
+
+        for ( int i = 0 ; i < 10 ; i++)
+        {
+            for ( int j = 0; j < 10 ; j++)
+            {
+                if (i + j == 9){
+                    a[i][j] = 0;
+                }else{
+                    a[i][j] = 1;
+                }
+
+            }
+        }
+
+        String cad = "";
+        for (int i = 0; i < a[0].length; i++)
+        {
+            for (int j = 0; j < a[0].length; j++)
+            {
+                cad += "|" + a[i][j];
+            }
+
+              cad += "| \n";
+        }  
+        System.out.println(cad);
 
     }
 }
