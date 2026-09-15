@@ -239,6 +239,7 @@ public class SolucionMatrices
 
         //punto 24 del taller 
 
+        /* 
         int [][] p = {{3, 7, 12, 4, 12, 4, 6, 8, 3, 2, 6, 8 },
                                 {1, 2, 3, 4, 2, 7, 2, 12, 45, 6, 1, 3},
                                 {6, 5, 3, 8, 12, 23, 5, 6, 9, 1, 2, 4},
@@ -311,7 +312,7 @@ public class SolucionMatrices
         System.out.println("El mes con la mayor produccion anual fue " + (mesMayorPro + 1));
         for (int i = 0; i < cadaMes.length; i++){
             System.out.println("[" + cadaMes[i] + "]");
-        }
+        }*/
 
 
 
