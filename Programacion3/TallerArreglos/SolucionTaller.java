@@ -220,12 +220,12 @@ public class SolucionTaller
 
 
         //punto 12 del taller
-       /*   int []w= {4,5,2,6,2,0,8,9,1,3,2,7};
+        int []w= {4,5,2,6,2,0,8,9,1,3,2,7};
         int x = 2;
         int []h= new int [w.length];
         int posh = 0;
 
-        System.out.print("el arreglo w[");
+        System.out.print("el arreglo w= ");
 
         for (int i = 0; i < w.length; i++ ){
 
@@ -241,15 +241,18 @@ public class SolucionTaller
 
         System.out.println("");
 
-        System.out.println("los indices de x=2 : ");  //aca tambien debo mejorar la impresio, bueno con todos 
+        System.out.print("los indices de x=2 : ");  
+        
+        for (int i = 0; i < posh; i++)
+        {
+            System.out.print( h[i] + ", " );
+        }
 
-         for (int i = 0; i < posh; i++){
-            System.out.println("h[" + h[i] + "]");
-        }*/
+        System.out.println("");
 
         //punto 13 del taller
 
-        int []y = new int [20];
+       /*  int []y = new int [20];
         int []g= new int [y.length];
         int []f= new int [y.length];
 
@@ -304,7 +307,7 @@ public class SolucionTaller
         System.out.print("el arreglo de los mayores f[");
          for (int i = 0; i < posf; i++){
             System.out.print( f[i] + ", " );
-        }
+        }*/
 
     }
 }
