@@ -249,7 +249,7 @@ public class SolucionTaller
 
         //punto 13 del taller
 
-        /*int []y = new int [20];
+        int []y = new int [20];
         int []g= new int [y.length];
         int []f= new int [y.length];
 
@@ -304,7 +304,7 @@ public class SolucionTaller
         System.out.print("el arreglo de los mayores f[");
          for (int i = 0; i < posf; i++){
             System.out.print( f[i] + ", " );
-        }*/
+        }
 
     }
 }

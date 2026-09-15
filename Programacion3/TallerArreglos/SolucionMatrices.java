@@ -7,9 +7,9 @@ public class SolucionMatrices
     {
 
         //punto 17 del taller
-       /*  int [][] m = {{2, 21, 15}, 
-                         {8, 5, 12}, 
-                         {1, 4, 3}};
+        /*int [][] m = {{2, 21, 15}, 
+                      {8, 5, 12}, 
+                      {1, 4, 3}};
 
 
               String cad = "";
@@ -67,7 +67,7 @@ public class SolucionMatrices
 
         // punto 19 del taller
 
-       /*  int n = 4;
+        /*int n = 4;
         int m = 4;
 
         int[][] a = new int[n][m];
@@ -97,7 +97,7 @@ public class SolucionMatrices
 
         // punto 20 dle taller 
 
-        /*int n = 10;
+        int n = 10;
         int m = 10;
         int [][] a = new int [n][m];
 
@@ -105,7 +105,7 @@ public class SolucionMatrices
         {
             for ( int j = 0; j < 10 ; j++)
             {
-                if (i + j == 9){
+                if (j >= i){
                     a[i][j] = 0;
                 }else{
                     a[i][j] = 1;
@@ -124,7 +124,7 @@ public class SolucionMatrices
 
               cad += "| \n";
         }  
-        System.out.println(cad);*/
+        System.out.println(cad);
 
         //punto 21 del taller
 
@@ -171,7 +171,7 @@ public class SolucionMatrices
 
         // punto 22 del taller
 
-        Scanner poner = new Scanner(System.in);
+       /* Scanner poner = new Scanner(System.in);
 
         System.out.print("Ingrese el número de filas: ");
         int filas = poner.nextInt();
@@ -234,7 +234,10 @@ public class SolucionMatrices
         System.out.println( "Posicion del numero mayor: [" + filama + "][" + columnama + "]");
         
          System.out.println("\n El numero menor es: " + menor);
-        System.out.println( "Posicion del numero menor: [" + filame + "][" + columname + "]");
+        System.out.println( "Posicion del numero menor: [" + filame + "][" + columname + "]");*/
+
+
+        //punto 24 del taller 
 
     }
 }
