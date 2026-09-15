@@ -239,7 +239,7 @@ public class SolucionMatrices
 
         //punto 24 del taller 
 
-        int [][] produccion = {{3, 7, 12, 4, 12, 4, 6, 8, 3, 2, 6, 8 },
+        int [][] p = {{3, 7, 12, 4, 12, 4, 6, 8, 3, 2, 6, 8 },
                                 {1, 2, 3, 4, 2, 7, 2, 12, 45, 6, 1, 3},
                                 {6, 5, 3, 8, 12, 23, 5, 6, 9, 1, 2, 4},
                                 {1, 5, 7, 12, 4, 6, 9, 4, 6, 8, 12 , 2}
@@ -248,16 +248,70 @@ public class SolucionMatrices
 
         System.out.println("\n La gran produccion");
         String cad = "";
-        for (int i = 0; i < produccion.length; i++)
+        for (int i = 0; i < p.length; i++)
         {
-            for (int j = 0; j < produccion[0].length; j++)
+            for (int j = 0; j < p[0].length; j++)
             {
-                cad += "|" + produccion[i][j];
+                cad += "|" + p[i][j];
             }
 
               cad += "| \n";
         }  
         System.out.println(cad);
+
+        double [] cadaMes = new double [p[0].length];
+
+        for (int j = 0; j < p[0].length; j++) 
+        {
+            double sumaMes = 0;
+            for (int i = 0; i < p.length; i++) 
+            {
+                sumaMes += p[i][j];
+                
+            }
+            cadaMes[j] = sumaMes;
+            
+        }
+
+        double sAnual = 0;
+
+
+        for (int j = 0; j < p[0].length; j++) 
+        {
+            sAnual += cadaMes[j];
+            
+        }
+        double promAnual = sAnual / p[0].length;
+
+        int mayorMeses = 0;
+        int menorMeses = 0;
+        double maxMes = cadaMes[0];
+        int mesMayorPro = 0;
+
+        for (int j = 0; j < p[0].length; j++)
+        {
+            if (cadaMes[j] > promAnual){
+                mayorMeses ++;
+            }else if(cadaMes[j] < promAnual){
+                menorMeses ++;
+            }
+            
+            if (cadaMes[j] > maxMes)
+            {
+                maxMes = cadaMes[j];
+                mesMayorPro = j;
+
+            }
+
+        }
+
+        System.out.println("El promedio anual de toneladas cosechadas es de: " + promAnual + " toneladas.");
+        System.out.println("Los mese con mayor produccion al promedio anual fueron " + mayorMeses);
+        System.out.println("los meses con menor produccion al promedio anual fueron " + menorMeses);
+        System.out.println("El mes con la mayor produccion anual fue " + (mesMayorPro + 1));
+        for (int i = 0; i < cadaMes.length; i++){
+            System.out.println("[" + cadaMes[i] + "]");
+        }
 
 
 
