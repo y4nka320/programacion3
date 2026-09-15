@@ -97,7 +97,7 @@ public class SolucionMatrices
 
         // punto 20 dle taller 
 
-        int n = 10;
+        /*int n = 10;
         int m = 10;
         int [][] a = new int [n][m];
 
@@ -239,18 +239,28 @@ public class SolucionMatrices
 
         //punto 24 del taller 
 
-        int [][] produccion = {{3, 7, 12, 4},
-                                {12, 5, 9,1},
-                                {13, 6, 7, 9},
-                                {4, 5, 7, 2},
-                                {5, 7, 8, 2},
-                                {8, 5, 4, 12},
-                                {14, 16, 12, 15},
-                                {12, 1, 4, 9},
-                                {11, 4, 2, 7},
-                                {1, 2, 7, 2},
-                                {12, 1, 4, 7},
-                                {9, 2, 4, 6}};
+        int [][] produccion = {{3, 7, 12, 4, 12, 4, 6, 8, 3, 2, 6, 8 },
+                                {1, 2, 3, 4, 2, 7, 2, 12, 45, 6, 1, 3},
+                                {6, 5, 3, 8, 12, 23, 5, 6, 9, 1, 2, 4},
+                                {1, 5, 7, 12, 4, 6, 9, 4, 6, 8, 12 , 2}
+                                
+        };
+
+        System.out.println("\n La gran produccion");
+        String cad = "";
+        for (int i = 0; i < produccion.length; i++)
+        {
+            for (int j = 0; j < produccion[0].length; j++)
+            {
+                cad += "|" + produccion[i][j];
+            }
+
+              cad += "| \n";
+        }  
+        System.out.println(cad);
+
+
+
 
     }
 }
