@@ -169,7 +169,7 @@ public class SolucionTaller
 
         //punto 11 del taller 
 
-        /*  int[] e = {12, -3, 0, -6,-19, 4, 1, 6};
+        int[] e = {12, -3, 0, -6,-19, 4, 1, 6};
         int[] n = new int[e.length]; 
         int[] v = new int[e.length];
         int[] o = new int[e.length];
@@ -197,29 +197,45 @@ public class SolucionTaller
 
         }
 
-        System.out.println("el arreglo original es: ");
-        for (int i = 0; i < e.length; i++){
-            System.out.println("e[" + e[i] + "] ");
+        System.out.print("el arreglo original es: ");
+        
+        for (int i = 0; i < e.length; i++)
+        {
+            System.out.print( e[i] + ", " );
         }
 
-        System.out.println("los numeros positivos son: ");
-        for ( int i = 0; i < posv; i++){
-            System.out.println("v[" + v[i] + "]\n");
+        System.out.println("");
+
+        System.out.print("los numeros positivos son: ");
+        
+         for (int i = 0; i < posv; i++)
+        {
+            System.out.print( v[i] + ", " );
         }
 
+        System.out.println("");
 
-        System.out.println("los numeros negativos son: ");
-        for (int i = 0; i < posn; i++){
-            System.out.println("n["+ n[i] + "]\n");
+
+        System.out.print("los numeros negativos son: ");
+        
+         for (int i = 0; i < posn; i++)
+        {
+            System.out.print( n[i] + ", " );
         }
 
-        System.out.println("arreglo con el numero: ");   //tengo que mejorar la impresion del arreglo para que se vea bonito
-        for (int i = 0; i < poso; i++){
-            System.out.println("o["+ o[i] + "]\n");
-        }*/
+        System.out.println("");
+
+    
+        System.out.print("arreglo con el numero: ");   //tengo que mejorar la impresion del arreglo para que se vea bonito
+        
+        for (int i = 0; i < poso; i++)
+        {
+            System.out.print( o[i] + ", " );
+        }
 
 
         //punto 12 del taller
+        /* 
         int []w= {4,5,2,6,2,0,8,9,1,3,2,7};
         int x = 2;
         int []h= new int [w.length];
@@ -248,7 +264,7 @@ public class SolucionTaller
             System.out.print( h[i] + ", " );
         }
 
-        System.out.println("");
+        System.out.println("");*/
 
         //punto 13 del taller
 
