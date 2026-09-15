@@ -169,6 +169,7 @@ public class SolucionTaller
 
         //punto 11 del taller 
 
+        /* 
         int[] e = {12, -3, 0, -6,-19, 4, 1, 6};
         int[] n = new int[e.length]; 
         int[] v = new int[e.length];
@@ -231,7 +232,7 @@ public class SolucionTaller
         for (int i = 0; i < poso; i++)
         {
             System.out.print( o[i] + ", " );
-        }
+        }*/
 
 
         //punto 12 del taller
