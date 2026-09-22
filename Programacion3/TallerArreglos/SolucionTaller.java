@@ -143,7 +143,7 @@ public class SolucionTaller
 
         // punto 10 del taller
 
-         /*t [] p = {15, 9, 0, 7, 8, 3, 1};
+        /*  t [] p = {15, 9, 0, 7, 8, 3, 1};
         //int [] p = {8, 9, 4, 3, 20, 5}; esto para cuando los elemtos de p son pares
         int [] q = new int[(p.length + 1) / 2];
 
