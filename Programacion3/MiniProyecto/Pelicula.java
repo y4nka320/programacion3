@@ -15,6 +15,14 @@ public class Pelicula
         duracionMinutos = minutos;
     }
 
-    
+    public String getNombre() {return nombre; }
+    public String getIdioma () {return idioma;}
+    public String getTipo() {return tipo;}
+    public int getDuracionMinutos() {return duracionMinutos;}
+
+    public void mostrarInformacion()
+    {
+        System.out.println("Titulo: " + nombre + " | Idioma: " + idioma + " | tipo: " + tipo + " | Duracion: " + duracionMinutos + " min");
+    }
 
 }
