@@ -135,4 +135,20 @@ public class sala
         }
         return precioResultante;
     }
+
+    public int contarDisponibles()
+    {
+        int totalDisponible = 0;
+        for (int indiceFila = 1; indiceFila < mapaAsientos.length; indiceFila ++)
+        {
+            for (int indiceColumna = 1; indiceColumna < mapaAsientos[indiceFila].length; indiceColumna++)
+            {
+                if (mapaAsientos[indiceFila][indiceColumna].equals("-"))
+                {
+                    totalDisponible = totalDisponible + 1;
+                }
+            }
+        }
+        return totalDisponible;
+    }
 }
