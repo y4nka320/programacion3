@@ -81,4 +81,18 @@ public class sala
     {
         return pColumna >= 1 && pColumna<= mapaAsientos[0].length - 1;
     }
+
+    //este decide si la fila que se pone es preferencial con las salas 1 y 2  y filas G y H
+    public boolean esPreferencial(String pFila)
+    {
+        boolean esFilaPreferencial = false;
+        if (salaId == 1 || salaId == 2){
+            if (pFila.equals("G") || pFila.equals("H")){
+                esFilaPreferencial = true;
+            }
+        }
+        return esFilaPreferencial;
+    }
+
+    
 }
