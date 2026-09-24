@@ -66,12 +66,19 @@ public class sala
     public int buscarIndiceFila(String pFila)
     {
         int indiceEncontrado = -1;
-        for (int indiceFila = 1; inidceFila < mapaAsientos.length; indiceFila = indiceFila+1){
+        for (int indiceFila = 1; indiceFila < mapaAsientos.length; indiceFila = indiceFila+1){
             if (mapaAsientos[indiceFila][0].equals(pFila))
             {
                 indiceEncontrado = indiceFila;
             }   
         }
         return indiceEncontrado;
+    }
+
+    //esto me verifica las columnas validas, entonces la columna con el indice 0 no vale porque pues ahi no hay nada
+    //la columna debe ser igual o mayor a 1 y menor o igual al limite superior
+    public boolean columnaValida(int pColumna)
+    {
+        return pColumna >= 1 && pColumna<= mapaAsientos[0].length - 1;
     }
 }
