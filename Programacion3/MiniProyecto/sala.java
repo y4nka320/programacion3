@@ -49,4 +49,29 @@ public class sala
             };
         }
     }
+
+    public int getSalaId(){
+        return salaId;
+    }
+
+    public boolean isSoloPermite3D(){
+        return soloPermite3D;
+    }
+
+    public Funcion[] getFuncionesDelDia(){
+        return funcionesDelDia;
+    }
+
+    //esto va a buscar el indice de la fila dentro de la matriz dependiendo de la letra
+    public int buscarIndiceFila(String pFila)
+    {
+        int indiceEncontrado = -1;
+        for (int indiceFila = 1; inidceFila < mapaAsientos.length; indiceFila = indiceFila+1){
+            if (mapaAsientos[indiceFila][0].equals(pFila))
+            {
+                indiceEncontrado = indiceFila;
+            }   
+        }
+        return indiceEncontrado;
+    }
 }
