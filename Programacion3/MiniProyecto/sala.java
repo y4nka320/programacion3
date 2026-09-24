@@ -94,5 +94,14 @@ public class sala
         return esFilaPreferencial;
     }
 
-    
+    public void mostrarMapa()
+    {
+        System.out.println("--- Mapa de sillas de la sala " + salaId + " ---");
+        for (int indiceFila = 0; indiceFila < mapaAsientos.length; indiceFila ++) {
+            for (int indiceColumna = 0; indiceColumna < mapaAsientos[indiceFila].length; indiceColumna ++) {
+                System.out.println(mapaAsientos[indiceFila][indiceColumna] + "\t");
+            }
+            System.out.println();
+        }
+    }
 }
