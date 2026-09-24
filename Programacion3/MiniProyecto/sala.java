@@ -94,6 +94,7 @@ public class sala
         return esFilaPreferencial;
     }
 
+    //esto recorre l amatriz y va a mostrar el mapa
     public void mostrarMapa()
     {
         System.out.println("--- Mapa de sillas de la sala " + salaId + " ---");
@@ -136,6 +137,8 @@ public class sala
         return precioResultante;
     }
 
+
+    //esto es breve, cuenta las sillas dispoble si estan "-"
     public int contarDisponibles()
     {
         int totalDisponible = 0;
@@ -151,4 +154,44 @@ public class sala
         }
         return totalDisponible;
     }
+
+
+    //aca vamos a empezar ya con los horarios de las funciones
+    public void mostrarFunciones()
+    {
+        System.out.println("--- Funciones de la sala " + salaId + " ---");
+        for (int indiceFuncion = 0; indiceFuncion < funcionesDelDia.length; indiceFuncion++)
+        {
+            funcionesDelDia[indiceFuncion].mostrarInfo();   
+        }
+
+    }
+
+    //aca me valida el tipo de pelicula con las salas
+    // 3D solo con la 3, 35mm solo con 1 y 2
+    public boolean asignarPelicula(int pFranjaHoraria, Pelicula pPelicula)
+    {
+        boolean tipoCompatible;
+
+        if(soloPermite3D){
+            tipoCompatible = pPelicula.getTipoProyeccion().equals("3D");
+            if (!tipoCompatible){
+                System.out.println("La sala" + salaId + " solo admite peliculas 3D");
+            }
+        }else{
+            tipoCompatible = !pPelicula.getTipoProyeccion().equals("3D");
+            if (!tipoCompatible){
+                System.out.println("La sala " + salaId + " no admite peliculas 3D");
+            }
+        }
+
+        boolean asignacionExitosa = false;
+        if(tipoCompatible){
+            Funcion funcionSeleccionada = funcionesDelDia[pFranjaHoraria - 1];
+            asignacionExitosa = funcionSeleccionada.intentarAsignar(pPelicula);
+        }
+        return asignacionExitosa;
+    }
+
+
 }
