@@ -104,4 +104,35 @@ public class sala
             System.out.println();
         }
     }
+
+    //aca es donde mira se ponen las sillas vendidas, va a devolver el precio, va adecir que no se puede
+    // si no existe la fila, indices invalidos o ya esta vedida
+
+    public double venderSilla(String pFila, int pColumna)
+    {
+        double precioResultante = -1;
+        int indiceFila = buscarIndiceFila(pFila);
+
+        if(indiceFila == -1){
+            System.out.println("La fila \"" + pFila + "\" no existe en esta sala.");
+        } else if(!columnaValida(pColumna)){
+            System.out.println("La silla numero " + pColumna + " no existe en esta sala.");
+        }else if(mapaAsientos[indiceFila][pColumna].equals("_")){
+            System.out.println("En esta posicion no hay silla fisica.");
+        }else if (mapaAsientos[indiceFila][pColumna].equals(" ")){
+            System.out.println(" Esa posicion no corresponde a una silla valida");
+        }else if(mapaAsientos[indiceFila][pColumna].equals("X")){
+            System.out.println("La silla" + pFila + pColumna + " ya fue vendida ");
+        }else{
+            mapaAsientos[indiceFila][pColumna] = "x";
+            if (soloPermite3D) {
+                precioResultante = 10000;
+            }else if (esPreferencial(pFila)){
+                precioResultante = 12000;
+            }else{
+                precioResultante = 8000;
+            }
+        }
+        return precioResultante;
+    }
 }
