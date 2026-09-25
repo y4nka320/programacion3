@@ -48,17 +48,11 @@ public class sala
         }
     }
 
-    public int getSalaId(){
-        return salaId;
-    }
+    public int getSalaId(){return salaId;}
 
-    public boolean isSoloPermite3D(){
-        return soloPermite3D;
-    }
+    public boolean isSoloPermite3D(){ return soloPermite3D;}
 
-    public Funcion[] getFuncionesDelDia(){
-        return funcionesDelDia;
-    }
+    public Funcion[] getFuncionesDelDia(){return funcionesDelDia;}
 
     //esto va a buscar el indice de la fila dentro de la matriz dependiendo de la letra
     public int buscarIndiceFila(String pFila)
