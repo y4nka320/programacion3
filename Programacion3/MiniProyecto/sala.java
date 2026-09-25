@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class sala 
 {
-
-    //hare los atributos privados
     private int salaId;
     private String[][] mapaAsientos;
     private boolean soloPermite3D;  //este es para que solo la sala 3 sea verdadero
@@ -167,8 +165,8 @@ public class sala
 
     }
 
-    //aca me valida el tipo de pelicula con las salas
-    // 3D solo con la 3, 35mm solo con 1 y 2
+    //aca me valida el tipo de pelicula con las salas y horarios
+   
     public boolean asignarPelicula(int pFranjaHoraria, Pelicula pPelicula)
     {
         boolean tipoCompatible;
@@ -191,6 +189,55 @@ public class sala
             asignacionExitosa = funcionSeleccionada.intentarAsignar(pPelicula);
         }
         return asignacionExitosa;
+    }
+
+    //aca esta el apartado de ventas, valida que tenga, peliculas
+    //muestra el mapa y vende sillas y muestra el final
+    public void venderEntradas(Scanner scanner, int pFranjaHoraria)
+    {
+
+        Funcion funcionSeleccionada = funcionesDelDia[pFranjaHoraria - 1];
+
+        if(!funcionSeleccionada.tieneAsignacion()){
+            System.out.println("Esta funcion todavia no tiene una peliucla asignada.");
+            return;
+        }
+
+        System.out.println("Funcion: " + funcionSeleccionada.getPeliculaAsignada().getNombre() + " (" + funcionSeleccionada.getHorarioTexto() + ")");
+
+        double totalAcumulado = 0;
+
+        String deseaContinuar;
+
+        do
+        {
+            mostrarMapa();
+            System.out.println("Sillas disponibles en esta funion: " + contarDisponibles());
+
+            System.out.println("ingrese la fila de la silla (ej: B): ");
+            String filaIngresada = scanner.next().toUpperCase(); //esto pasa de minuscula a mayuscula siempre
+
+            System.out.println("ingrese el numero de la silla: ");
+            int columnaIngresada = scanner.nextInt();
+
+            double precioSilla = venderSilla(filaIngresada, columnaIngresada);
+
+            if(precioSilla == -1) {
+                System.out.println("No fue posible vender esa siila, intente con otra.");
+                
+            }else {
+                totalAcumulado = totalAcumulado + precioSilla;
+                System.out.println("silla " + filaIngresada + columnaIngresada + " vendida por $" + precioSilla + ". Total acumulado: $" + totalAcumulado);
+            }
+
+            System.out.println("Desea comprar otra silla? (S = si / N = no): ");
+            deseaContinuar = scanner.next().toUpperCase();
+        } while (deseaContinuar.equals("S"));
+
+        System.out.println("\n--- Resumen de la venta --- ");
+        System.out.println("Total a pagar: $" + totalAcumulado);
+        System.out.println("Sillas disponibles restantes en la funcion: " + contarDisponibles());
+
     }
 
 
