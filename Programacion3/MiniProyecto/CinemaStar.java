@@ -120,7 +120,7 @@ public class CinemaStar
 
             switch (opcionSubmenu) {
                 case 1:
-                    asignarPeliculaSala(scanner, salas, peliculaRegistradas, cantidadPeliculas);
+                    asignarPeliculaASala(scanner, salas, peliculaRegistradas, cantidadPeliculas);
                     break;
                 case 2:
                     for (int indiceSala = 0; indiceSala < salas.length; indiceSala++) {
@@ -138,7 +138,7 @@ public class CinemaStar
         }while (opcionSubmenu !=3);
     }
 
-    private static void asignarPeliculaSala(Scanner scanner, Sala[] salas, Pelicula[] peliculaRegistradas, int cantidadPeliculas)
+    private static void asignarPeliculaASala(Scanner scanner, Sala[] salas, Pelicula[] peliculaRegistradas, int cantidadPeliculas)
     {
         System.out.println("\nIngrese el numero de sala (1, 2 o 3): ");
         int idSala = scanner.nextInt();
@@ -163,6 +163,28 @@ public class CinemaStar
         Sala salaSeleccionada = salas[idSala - 1];
         Pelicula peliculaSeleccionada = peliculasRegistradas[idPelicula - 1];
         salaSeleccionada.asignarPelicula(franjaSeleccionada, peliculaSeleccionada);
+    }
+
+    private static void menuVentas(Scanner scanner, sala[] salas)
+    {
+        System.out.println("\nIngrese el numero de sala (1, 2 o 3");
+        int idSala = scanner.nextInt();
+
+        if(idSala < 1 || idSala > 3){
+            System.out.println("\n***sala inexistente");
+            return;
+        }
+
+        System.out.println("\nIngrese el horario deseado (1, 2 o 3)");
+        int franjaSeleccionada = scanner.nextInt();
+
+        if (franjaSeleccionada < 1 || franjaSeleccionada > 3){
+            System.out.println("\n***hario inexistente***");
+            return;
+        }
+
+        sala salaSeleccionada = salas[idSala - 1];
+        salaSeleccionada.venderEntradas(scanner, franjaSeleccionada);
     }
     
 }

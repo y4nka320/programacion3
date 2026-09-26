@@ -19,7 +19,7 @@ public class Pelicula
 
     public String getNombre() {return nombre; }
     public String getIdioma () {return idioma;}
-    public String getTipo() {return tipoProyeccion;}
+    public String getTipoProyeccion() {return tipoProyeccion;}
     public int getDuracionMinutos() {return duracionMinutos;}
 
     public void mostrarInfo()

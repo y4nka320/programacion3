@@ -12,7 +12,7 @@ public class sala
     //este es el constructor de la sala, depende de que sala sea le pone la mtriz que es
     public Sala(int pSalaId) 
     {
-        salaId= pSalaId;
+        salaId = pSalaId;
 
         //con esto se crean los 3 horarios de la sala
         funcionesDelDia = new Funcion[3];
