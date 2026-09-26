@@ -2,7 +2,7 @@ package Programacion3.MiniProyecto;
 
 import java.util.Scanner;
 
-public class sala 
+public class Sala 
 {
     private int salaId;
     private String[][] mapaAsientos;
@@ -92,7 +92,7 @@ public class sala
         System.out.println("--- Mapa de sillas de la sala " + salaId + " ---");
         for (int indiceFila = 0; indiceFila < mapaAsientos.length; indiceFila ++) {
             for (int indiceColumna = 0; indiceColumna < mapaAsientos[indiceFila].length; indiceColumna ++) {
-                System.out.println(mapaAsientos[indiceFila][indiceColumna] + "\t");
+                System.out.print(mapaAsientos[indiceFila][indiceColumna] + "\t");
             }
             System.out.println();
         }
@@ -117,7 +117,7 @@ public class sala
         }else if(mapaAsientos[indiceFila][pColumna].equals("X")){
             System.out.println("La silla" + pFila + pColumna + " ya fue vendida ");
         }else{
-            mapaAsientos[indiceFila][pColumna] = "x";
+            mapaAsientos[indiceFila][pColumna] = "X";
             if (soloPermite3D) {
                 precioResultante = 10000;
             }else if (esPreferencial(pFila)){

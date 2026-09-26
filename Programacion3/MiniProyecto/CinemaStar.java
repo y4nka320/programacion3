@@ -19,7 +19,7 @@ public class CinemaStar
         int opcion = 0;
         do
         {
-            System.out.println("\n-----CinemaStar-----"
+            System.out.print("\n-----CinemaStar-----"
                                 +  "\n 1. crear o ver peliculas disponibles"
                                 + "\n 2. asignar funciones"
                                 + "\n 3. Modulo de ventas"                    //despues reisar si lo cambio
@@ -102,7 +102,7 @@ public class CinemaStar
         }
     }
 
-    private static void menuFunciones(Scanner scanner, sala[] salas, Pelicula[] peliculaRegistradas, int cantidadPeliculas)
+    private static void menuFunciones(Scanner scanner, Sala[] salas, Pelicula[] peliculaRegistradas, int cantidadPeliculas)
     {
         if(cantidadPeliculas == 0){
             System.out.println("\n****Primer0 debes registrar al menos una pelicula (opcion 1 del menu principal)****");
@@ -148,6 +148,15 @@ public class CinemaStar
             return;
         }
 
+        mostrarListaPeliculas(peliculaRegistradas, cantidadPeliculas);
+        System.out.print("Seleccione el numero de la pelicula: ");
+        int idPelicula = scanner.nextInt();
+
+        if(idPelicula < 1 || idPelicula > cantidadPeliculas){
+        System.out.println("\n***Pelicula invalida***");
+        return;
+        }
+
         System.out.println("\nFranjas horarias disponibles:");
         System.out.println("1. 14:00 - 16:30");
         System.out.println("2. 16:30 - 19:00");
@@ -161,11 +170,11 @@ public class CinemaStar
         }
 
         Sala salaSeleccionada = salas[idSala - 1];
-        Pelicula peliculaSeleccionada = peliculasRegistradas[idPelicula - 1];
+        Pelicula peliculaSeleccionada = peliculaRegistradas[idPelicula - 1];
         salaSeleccionada.asignarPelicula(franjaSeleccionada, peliculaSeleccionada);
     }
 
-    private static void menuVentas(Scanner scanner, sala[] salas)
+    private static void menuVentas(Scanner scanner, Sala[] salas)
     {
         System.out.println("\nIngrese el numero de sala (1, 2 o 3");
         int idSala = scanner.nextInt();
@@ -183,7 +192,7 @@ public class CinemaStar
             return;
         }
 
-        sala salaSeleccionada = salas[idSala - 1];
+        Sala salaSeleccionada = salas[idSala - 1];
         salaSeleccionada.venderEntradas(scanner, franjaSeleccionada);
     }
     
