@@ -118,8 +118,26 @@ public class CinemaStar
             System.out.print("\nSeleccione una opcion: ");
             opcionSubmenu = scanner.nextInt();
 
+            switch (opcionSubmenu) {
+                case 1:
+                    asignarPeliculaSala(scanner, salas, peliculaRegistradas, cantidadPeliculas);
+                    break;
+                case 2:
+                    for (int indiceSala = 0; indiceSala < salas.length; indiceSala++) {
+                        salas[indiceSala].mostrarFunciones();
+                        
+                    }
+                    break;
+                case 3:
+                    break;
             
-        }
+                default:
+                    System.out.println("\nOpcion no valida, intentar de nuevo");
+                    
+            }
+        }while (opcionSubmenu !=3);
     }
+
+    
     
 }
