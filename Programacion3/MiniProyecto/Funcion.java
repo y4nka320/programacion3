@@ -55,5 +55,12 @@ public class Funcion
 
     }
 
-    
+    public void mostrarInfo()
+    {
+        if (tieneAsignacion){
+            System.out.println("Horario" + franjaHoraria + " (" + getHorarioTexto() + "): " + peliculaAsignada.getNombre());
+        }else{
+            System.out.println("Horario " + franjaHoraria + " (" + getHorarioTexto() + "): aun no cuenta con asignacion de pelicula ");
+        }
+    }
 }
