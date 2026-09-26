@@ -60,7 +60,48 @@ public class CinemaStar
             System.out.println("3. Volver al menu principal");
             System.out.print("Seleccione una opcion: ");
             opcionSubmenu = scanner.nextInt();
+
+            switch (opcionSubmenu) {
+                case 1:
+                    if (cantidadPeliculas >= peliculasRegistradas.length) {
+                        System.out.println("\nNo hay espacio para registrar mas peliculas.");
+                    }else{
+                        peliculasRegistradas[cantidadPeliculas] = Pelicula.solicitarDatos(scanner);
+                        cantidadPeliculas = cantidadPeliculas + 1;
+                        System.out.println("\nPelicula registrada con exito.");
+                    }
+                    break;
+                case 2:
+                    mostrarListaPeliculas(peliculasRegistradas, cantidadPeliculas);
+                    break;
+                case 3:
+                    break;
+            
+                default:
+                    System.out.println("\nOpcion no valida, intentar de nuevo");
+                        
+            }
+                
+        }while (opcionSubmenu !=3); 
+        
+        return cantidadPeliculas;
+
+    }
+
+    private static void mostrarListaPeliculas(Pelicula[]peliculasRegistradas, int cantidadPeliculas)
+    {
+        if(cantidadPeliculas == 0){
+            System.out.println("\n En este momento no contamos con peliculas en fucion, vuelva pronto");
+
+        }else{
+            System.out.println("\n --- Peliculas Registradas ---");
+            for (int indice = 0; indice < cantidadPeliculas; indice++) {
+                System.out.println((indice + 1));
+                peliculasRegistradas[indice].mostrarInfo();
+            }
         }
     }
+
+    
     
 }
