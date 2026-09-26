@@ -35,4 +35,25 @@ public class Funcion
     }
 
 
+    //esta parte es la asignacion de pelicula a la franja
+    //si ya hay una pelicula a esa hora paila, si no, la asigna normal
+
+    public boolean intentarAsignar(Pelicula pPelicula)
+    {
+
+        boolean asignacionExitosa;
+        if(tieneAsignacion){
+            System.out.println("el horario " + franjaHoraria + " (" + getHorarioTexto() + ") ya tiene una pelicula asignada");
+            asignacionExitosa = false;
+        }else{
+            peliculaAsignada = pPelicula;
+            tieneAsignacion = true;
+            System.out.println("se ha asignado con exito la pelicula al horario " + franjaHoraria + " (" + getHorarioTexto() + ")");
+            asignacionExitosa = true;
+        }
+        return asignacionExitosa;
+
+    }
+
+    
 }
