@@ -102,6 +102,24 @@ public class CinemaStar
         }
     }
 
-    
+    private static void menuFunciones(Scanner scanner, sala[] salas, Pelicula[] peliculaRegistradas, int cantidadPeliculas)
+    {
+        if(cantidadPeliculas == 0){
+            System.out.println("\n****Primer0 debes registrar al menos una pelicula (opcion 1 del menu principal)****");
+            return;
+        }
+
+        int opcionSubmenu;
+        do{
+            System.out.println("\n--- Asignacion de Funciones ---");
+            System.out.println("1. Asignar pelicula a una sala/franja");
+            System.out.println("2. Ver funciones asignadas");
+            System.out.println("3. Volver al menu principal");
+            System.out.print("\nSeleccione una opcion: ");
+            opcionSubmenu = scanner.nextInt();
+
+            
+        }
+    }
     
 }
