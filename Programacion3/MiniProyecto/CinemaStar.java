@@ -138,6 +138,31 @@ public class CinemaStar
         }while (opcionSubmenu !=3);
     }
 
-    
+    private static void asignarPeliculaSala(Scanner scanner, Sala[] salas, Pelicula[] peliculaRegistradas, int cantidadPeliculas)
+    {
+        System.out.println("\nIngrese el numero de sala (1, 2 o 3): ");
+        int idSala = scanner.nextInt();
+
+        if(idSala < 1 || idSala > 3){
+            System.out.println("\n***Sala inexistente***");
+            return;
+        }
+
+        System.out.println("\nFranjas horarias disponibles:");
+        System.out.println("1. 14:00 - 16:30");
+        System.out.println("2. 16:30 - 19:00");
+        System.out.println("3. 19:00 - 21:00");
+        System.out.print("Seleccione la franja: ");
+        int franjaSeleccionada = scanner.nextInt();
+
+        if(franjaSeleccionada < 1 || franjaSeleccionada > 3) {
+            System.out.println("\n***Franja invalida.***");
+            return;
+        }
+
+        Sala salaSeleccionada = salas[idSala - 1];
+        Pelicula peliculaSeleccionada = peliculasRegistradas[idPelicula - 1];
+        salaSeleccionada.asignarPelicula(franjaSeleccionada, peliculaSeleccionada);
+    }
     
 }
