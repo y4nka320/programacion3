@@ -6,7 +6,7 @@ public class NavCarpetas
 {
     public static void main(String[] args) 
     {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         Stack<String> rutaCarpeta = new Stack<>();
         
 
@@ -31,15 +31,17 @@ public class NavCarpetas
 
         do{
             System.out.println("¿Que carpeta/directorio deseas buscar?");
-            System.out.println("1. C: "
+            System.out.print("1. C: "
                             + "\n 2. yanka"
                             + "\n 3. Descagas"
                             + "\n 4. Pruebas Pseint"
                             + "\n 5. Practicas"
                             + "\n 6. Visual practicas"
+                            + "\n 7. Salir de este menu"
+                            + "\n Seleccione una opcion: "
             );
 
-            opcion = sc.nextInt();
+            opcion = scanner.nextInt();
 
             switch (opcion) {
                 case 1:
@@ -60,15 +62,18 @@ public class NavCarpetas
                 case 6:
                     System.out.println("La carpeta 'Visual practicas' esta en la posicion: " + rutaCarpeta.search("visual practicas > "));
                     break;
-            
-                default:
+                case 7:
+                    System.out.println("Ha salido de este menu");
                     break;
+                default:
+                    System.out.println("Opcion invalida");
+                    
             }
 
 
         }while (opcion != 7);
             
-        
+        scanner.close();
        
        
 
