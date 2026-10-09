@@ -8,8 +8,8 @@ public class NavCarpetas
         
         Stack<String> rutaCarpeta = new Stack<>();
 
-        System.out.println("*** 1. Comprobar si la pila de ruta esta vacía ***");
-        System.out.println("¿la pila de directorios está vacía? " + rutaCarpeta.empty());
+        System.out.println("*** 1. Comprobar si la ruta esta vacía ***");
+        System.out.println("¿la ruta de carpetas está vacía? " + rutaCarpeta.empty());
 
         System.out.println("\n*** 2. Ingresar a subcarpetas***");
         rutaCarpeta.push("C:");
@@ -19,7 +19,10 @@ public class NavCarpetas
         rutaCarpeta.push("Practicas > ");
         rutaCarpeta.push("visual practicas > ");
 
-        
+        System.out.println("Ruta actual de navegacion : " + rutaCarpeta);
+       
+        System.out.println("\n*** 3. Consultar la carpeta activa sin salir de ella ***");
+        System.out.println("Carpeta activa actual " + rutaCarpeta.peek() );
     }
     
 }
