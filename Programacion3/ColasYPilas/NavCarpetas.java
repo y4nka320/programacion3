@@ -31,7 +31,7 @@ public class NavCarpetas
 
         do{
             System.out.println("¿Que carpeta/directorio deseas buscar?");
-            System.out.print("1. C: "
+            System.out.print("\n 1. C: "
                             + "\n 2. yanka"
                             + "\n 3. Descagas"
                             + "\n 4. Pruebas Pseint"
@@ -75,7 +75,16 @@ public class NavCarpetas
             
         scanner.close();
        
+       System.out.println("\n*** 5. salir de carpetas ***");
+       while (!rutaCarpeta.empty()) {
+        System.out.println("Retrocediendo de: " + rutaCarpeta.pop());
+        
+       }
+
+       System.out.println("¿Estamos en la carpeta inicial? " + rutaCarpeta.empty());
+
        
+
 
     }
     
