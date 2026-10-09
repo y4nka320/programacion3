@@ -12,6 +12,13 @@ public class NavCarpetas
         System.out.println("¿la pila de directorios está vacía? " + rutaCarpeta.empty());
 
         System.out.println("\n*** 2. Ingresar a subcarpetas***");
+        rutaCarpeta.push("C:");
+        rutaCarpeta.push("yanka > ");
+        rutaCarpeta.push("Descargas > ");
+        rutaCarpeta.push("Pruebas Pseint > ");
+        rutaCarpeta.push("Practicas > ");
+        rutaCarpeta.push("visual practicas > ");
+
         
     }
     
