@@ -10,10 +10,10 @@ public class NavCarpetas
         Stack<String> rutaCarpeta = new Stack<>();
         
 
-        System.out.println("*** 1. Comprobar si la ruta esta vacía ***");
+        System.out.println("=== 1. Comprobar si la ruta esta vacía ===");
         System.out.println("¿la ruta de carpetas está vacía? " + rutaCarpeta.empty());
 
-        System.out.println("\n*** 2. Ingresar a subcarpetas***");
+        System.out.println("\n=== 2. Ingresar a subcarpetas ===");
         rutaCarpeta.push("C:");
         rutaCarpeta.push("yanka > ");
         rutaCarpeta.push("Descargas > ");
@@ -23,10 +23,10 @@ public class NavCarpetas
 
         System.out.println("Ruta actual de navegacion : " + rutaCarpeta);
        
-        System.out.println("\n*** 3. Consultar la carpeta activa sin salir de ella ***");
+        System.out.println("\n=== 3. Consultar la carpeta activa sin salir de ella ===");
         System.out.println("Carpeta activa actual " + rutaCarpeta.peek());
 
-        System.out.println("\n*** 4. Buscar la posicion de una carpeta ***");
+        System.out.println("\n=== 4. Buscar la posicion de una carpeta ===");
         int opcion = 0;
 
         do{
@@ -75,19 +75,25 @@ public class NavCarpetas
             
         scanner.close();
 
-        System.out.println("\n*** 5. abriendo pestaña de administrador de archivos ");
+        System.out.println("\n=== 5. abriendo pestaña de administrador de archivos === ");
         Stack<String> rutaCarpeta2 = (Stack<String>)rutaCarpeta.clone(); 
         System.out.println("\nantigua pestaña: " + rutaCarpeta + "pestaña nueva: " + rutaCarpeta2);
 
-        System.out.println("\n 6. Borrando pestaña nueva" + "\n...");
+        System.out.println("\n === 6. Borrando pestaña nueva ===" + "\n...");
         rutaCarpeta2.clear();
-        System.out.println("pestaña nueva borrada");
+        System.out.println("pestaña nueva borrada: " + rutaCarpeta2.empty());
 
-        System.out.println("\n 7. Abriendo carpeta 'HTML' " + "\n..." + "\n se ha abierto correctamnete" + rutaCarpeta.add("HTML"));
+        System.out.println("\n === 7. Abriendo carpeta 'HTML'=== " + "\n..." + "\n se ha abierto correctamnete" + rutaCarpeta.add("HTML >")
+                            + "\n ahora la ruta es: " + rutaCarpeta);
 
-        
+        System.out.println("\n === 8. cual fue la segunda y quinta carpeta en abrirse? === "
+                            +"\n La segunda fue: " + rutaCarpeta.get(1) + "\n la quinta carpeta fue: " + rutaCarpeta.get(4) );
 
-        
+        System.out.println("\n=== 9. cual es la indice de la carpeta 'Descargas' ===" 
+                            + "\n Indice de la carpeta 'Descargas' es: " + rutaCarpeta.indexOf("Descargas > " ));
+
+        System.out.println("\n=== 10. cual fue la ultima carpeta abierta?" + "Fue la carpeta " + rutaCarpeta.lastElement());
+    
        
        System.out.println("\n*** #. salir de carpetas ***");
        while (!rutaCarpeta.empty()) {
