@@ -74,8 +74,22 @@ public class NavCarpetas
         }while (opcion != 7);
             
         scanner.close();
+
+        System.out.println("\n*** 5. abriendo pestaña de administrador de archivos ");
+        Stack<String> rutaCarpeta2 = (Stack<String>)rutaCarpeta.clone(); 
+        System.out.println("\nantigua pestaña: " + rutaCarpeta + "pestaña nueva: " + rutaCarpeta2);
+
+        System.out.println("\n 6. Borrando pestaña nueva" + "\n...");
+        rutaCarpeta2.clear();
+        System.out.println("pestaña nueva borrada");
+
+        System.out.println("\n 7. Abriendo carpeta 'HTML' " + "\n..." + "\n se ha abierto correctamnete" + rutaCarpeta.add("HTML"));
+
+        
+
+        
        
-       System.out.println("\n*** 5. salir de carpetas ***");
+       System.out.println("\n*** #. salir de carpetas ***");
        while (!rutaCarpeta.empty()) {
         System.out.println("Retrocediendo de: " + rutaCarpeta.pop());
         
