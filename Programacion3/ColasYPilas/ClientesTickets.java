@@ -35,11 +35,17 @@ public class ClientesTickets
 
         System.out.println("orden de clientes faltantes: " + tickets);
 
-        System.out.println("\n===verificacion de clientes ==="
+        System.out.println("\n=== verificacion de clientes ==="
                             + "\nexiste el cliente C10?: " + tickets.contains("C10")
                             +  "\nexiste el cliente C8?: " + tickets.contains("C8")
         );
 
+        System.out.println("\n cuantos clientes hay en la tienda?: " + tickets.size());
+
+        System.out.println("\n=== Hora de cierre cercana, atendiendo a los ultimos clientes===");
+        tickets.clear();
+        System.out.println("clientes sin atender: " + tickets.size()
+                            + "\nClientes satisfecho, gracias por su visita");
 
 
     }
