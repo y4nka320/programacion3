@@ -84,15 +84,27 @@ public class NavCarpetas
         System.out.println("pestaña nueva borrada: " + rutaCarpeta2.empty());
 
         System.out.println("\n === 7. Abriendo carpeta 'HTML'=== " + "\n..." + "\n se ha abierto correctamnete" + rutaCarpeta.add("HTML >")
-                            + "\n ahora la ruta es: " + rutaCarpeta);
+                            + "\n ahora la ruta es: " + rutaCarpeta
+        );
 
         System.out.println("\n === 8. cual fue la segunda y quinta carpeta en abrirse? === "
-                            +"\n La segunda fue: " + rutaCarpeta.get(1) + "\n la quinta carpeta fue: " + rutaCarpeta.get(4) );
+                            +"\n La segunda fue: " + rutaCarpeta.get(1) + "\n la quinta carpeta fue: " + rutaCarpeta.get(4) 
+        );
 
         System.out.println("\n=== 9. cual es la indice de la carpeta 'Descargas' ===" 
-                            + "\n Indice de la carpeta 'Descargas' es: " + rutaCarpeta.indexOf("Descargas > " ));
+                            + "\n Indice de la carpeta 'Descargas' es: " + rutaCarpeta.indexOf("Descargas > " )
+        );
 
         System.out.println("\n=== 10. cual fue la ultima carpeta abierta?" + "Fue la carpeta " + rutaCarpeta.lastElement());
+
+        System.out.println("\n === 11. Cuantas carpetas en total hay abiertas?: " + rutaCarpeta.size() + " carpetas abiertas");
+
+        System.out.println("\n === 12. las carpetas 'yanka' y 'videos' estan abiertas? === " +
+                            "\nla carpeta 'yanka': " + rutaCarpeta.contains("yanka > ")
+                        + "\nla carpeta 'videos': " + rutaCarpeta.contains("videos > ")
+        );
+
+        
     
        
        System.out.println("\n*** #. salir de carpetas ***");
