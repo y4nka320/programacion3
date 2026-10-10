@@ -21,7 +21,7 @@ public class NavCarpetas
         rutaCarpeta.push("Practicas > ");
         rutaCarpeta.push("visual practicas > ");
 
-        System.out.println("Ruta actual de navegacion : " + rutaCarpeta);
+        System.out.println("Ruta actual de navegacion: " + rutaCarpeta);
        
         System.out.println("\n=== 3. Consultar la carpeta activa sin salir de ella ===");
         System.out.println("Carpeta activa actual " + rutaCarpeta.peek());
@@ -77,7 +77,9 @@ public class NavCarpetas
 
         System.out.println("\n=== 5. abriendo pestaña de administrador de archivos === ");
         Stack<String> rutaCarpeta2 = (Stack<String>)rutaCarpeta.clone(); 
-        System.out.println("\nantigua pestaña: " + rutaCarpeta + "pestaña nueva: " + rutaCarpeta2);
+        System.out.println("\nantigua pestaña: " + rutaCarpeta 
+                            + "\npestaña nueva: " + rutaCarpeta2
+        );
 
         System.out.println("\n === 6. Borrando pestaña nueva ===" + "\n...");
         rutaCarpeta2.clear();
@@ -95,7 +97,9 @@ public class NavCarpetas
                             + "\n Indice de la carpeta 'Descargas' es: " + rutaCarpeta.indexOf("Descargas > " )
         );
 
-        System.out.println("\n=== 10. cual fue la ultima carpeta abierta?" + "Fue la carpeta " + rutaCarpeta.lastElement());
+        System.out.println("\n=== 10. cual fue la ultima carpeta abierta?" 
+                        + "\nFue la carpeta " + rutaCarpeta.lastElement()
+        );
 
         System.out.println("\n === 11. Cuantas carpetas en total hay abiertas?: " + rutaCarpeta.size() + " carpetas abiertas");
 
@@ -104,16 +108,16 @@ public class NavCarpetas
                         + "\nla carpeta 'videos': " + rutaCarpeta.contains("videos > ")
         );
 
-        
-    
        
-       System.out.println("\n*** #. salir de carpetas ***");
+       System.out.println("\n=== 13. salir de carpetas ===");
        while (!rutaCarpeta.empty()) {
         System.out.println("Retrocediendo de: " + rutaCarpeta.pop());
         
        }
 
-       System.out.println("¿Estamos en la carpeta inicial? " + rutaCarpeta.empty());
+       System.out.println("¿Hemos cerrado todas las carpetas?: " + rutaCarpeta.empty());
+
+
 
        
 
