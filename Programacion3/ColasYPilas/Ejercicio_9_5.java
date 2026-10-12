@@ -16,7 +16,7 @@ public class Ejercicio_9_5
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("\nInsertar pares de numeros enteneros en el orden o ingresa 0 para terminar");
+        System.out.println("\nInsertar trio de numeros enteneros o ingresa 0 para terminar");
 
         while (true)
         {
@@ -37,60 +37,88 @@ public class Ejercicio_9_5
                 continue;
             }
 
-            System.out.println("Ingrese el elemento ");
+            System.out.print("Ingrese el elemento: ");
             int j = sc.nextInt();
 
-            if(i > 0)
-            {
-                if(i == 1)
-                    p1.push(j);
-                else if(i == 2)
-                    p2.push(j);
-                else if (i == 3)
-                    p3.push(j);
-                else if(i == 4)
-                    p4.push(j); 
-                else if(i == 5)
-                    p5.push(j);
-            }else{
-                int selecpilas = Math.abs(i);
-                boolean retirado = false;
-                int elementofuera = 0;
+            System.out.print("\ningrese el valor de k, -1 para borar los elementos de la pila ingresada " 
+                                + "\no 0 para seguir le proceso sin modificaciones: "
+            );
+            int k = sc.nextInt();
+            int selecpilas = Math.abs(i);
 
-                if(selecpilas == 1 && !p1.isEmpty()) {
-                    elementofuera = p1.pop();
-                    retirado = true;
-                }else if (selecpilas == 2 && !p2.isEmpty()){
-                    elementofuera = p2.pop();
-                    retirado = true;
+            if (k == -1){
+                if (selecpilas == 1)
+                    p1.clear();
+                else if (selecpilas == 2)
+                    p2.clear();
+                else if (selecpilas == 3)
+                    p3.clear();
+                else if (selecpilas == 4)
+                    p4.clear();
+                else if (selecpilas == 5)
+                    p5.clear();
 
-                }else  if(selecpilas == 3 && !p3.isEmpty()){
-                    elementofuera = p3.pop();
-                    retirado = true;
+                System.out.println("\nSe han borrado los elementos de la pila " + selecpilas);
 
-                }else  if(selecpilas == 4 && !p4.isEmpty()){
-                    elementofuera = p4.pop();
-                    retirado = true;
+                System.out.println("pila 1: " + p1);
+                System.out.println("pila 2: " + p2);
+                System.out.println("pila 3: " + p3);
+                System.out.println("pila 4: " + p4);
+                System.out.println("pila 5: " + p5);
 
-                }else if(selecpilas == 5 && !p5.isEmpty()){
-                    elementofuera = p5.pop();
-                    retirado = true;
-                }
-
-                if(retirado){
-                    
-                    System.out.println("Eliminado el elemento " + elementofuera + " de la Pila " + selecpilas);
+            }else if(k == 0){
+                if(i > 0){
+                    if(i == 1)
+                        p1.push(j);
+                    else if(i == 2)
+                        p2.push(j);
+                    else if (i == 3)
+                        p3.push(j);
+                    else if(i == 4)
+                        p4.push(j); 
+                    else if(i == 5)
+                        p5.push(j);
                 } else {
-                    System.out.println("La Pila " + selecpilas + " ya está vacía, no se puede eliminar.");
-                }
-                
-            }
+                    
+                    boolean retirado = false;
+                    int elementofuera = 0;
 
-            System.out.println("pila 1: " + p1);
-            System.out.println("pila 2: " + p2);
-            System.out.println("pila 3: " + p3);
-            System.out.println("pila 4: " + p4);
-            System.out.println("pila 5: " + p5);
+                    if(selecpilas == 1 && !p1.isEmpty()) {
+                        elementofuera = p1.pop();
+                        retirado = true;
+                    }else if (selecpilas == 2 && !p2.isEmpty()){
+                        elementofuera = p2.pop();
+                        retirado = true;
+
+                    }else  if(selecpilas == 3 && !p3.isEmpty()){
+                        elementofuera = p3.pop();
+                        retirado = true;
+
+                    }else  if(selecpilas == 4 && !p4.isEmpty()){
+                        elementofuera = p4.pop();
+                        retirado = true;
+
+                    }else if(selecpilas == 5 && !p5.isEmpty()){
+                        elementofuera = p5.pop();
+                        retirado = true;
+                    }
+
+                    if(retirado){
+                        
+                        System.out.println("\nEliminado el elemento " + elementofuera + " de la Pila " + selecpilas);
+                    } else {
+                        System.out.println("La Pila " + selecpilas + " ya está vacía, no se puede eliminar.");
+                    }
+                
+                }
+
+                System.out.println("pila 1: " + p1);
+                System.out.println("pila 2: " + p2);
+                System.out.println("pila 3: " + p3);
+                System.out.println("pila 4: " + p4);
+                System.out.println("pila 5: " + p5);
+
+            }
 
         }
         
