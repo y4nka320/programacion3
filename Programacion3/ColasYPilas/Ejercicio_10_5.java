@@ -35,5 +35,35 @@ public class Ejercicio_10_5
             System.out.println("Registro añadido a la cola del día");
         } while (true);
 
+        if (!colaSeguroSocial.isEmpty()) {
+            do {
+                String nssActual = colaSeguroSocial.poll();
+                String marcaActual = colaMarca.poll();
+
+                boolean existeEnLista = false;
+
+                // Recorrido de la lista enlazada para verificar coincidencias
+                for (int i = 0; i < basePersonal.size(); i++) {
+                    Repartidor empleado = basePersonal.get(i);
+                    if (empleado.getSeguroSocial().equals(nssActual)) {
+                        empleado.sumarDiaLaboral();
+                        empleado.setMarcaAnunciada(marcaActual);
+                        existeEnLista = true;
+                        break;
+                    }
+                }
+
+                // Si el trabajador no figuraba previamente, se añade como registro nuevo
+                if (!existeEnLista) {
+                    basePersonal.add(new Repartidor(nssActual, marcaActual, 1));
+                }
+            } while (!colaSeguroSocial.isEmpty());
+        }
+
+        System.out.println("\n.......Lista actualizada......");
+        for (int i = 0; i < basePersonal.size(); i++) {
+            System.out.println(basePersonal.get(i));
+        }
+
     }
 }
