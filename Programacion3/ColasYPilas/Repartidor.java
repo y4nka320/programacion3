@@ -12,4 +12,26 @@ public class Repartidor
         this.marcaAnunciada = marcaAnunciada;
         this.jornadaLaboral = jornadaLaboral;
     }
+
+    public String getSeguroSocial() 
+    {
+        return seguroSocial;
+    }
+
+    public String getMarcaAnunciada() 
+    {
+        return marcaAnunciada;
+    }
+
+    public int getJornadaLaboral() 
+    {
+        return jornadaLaboral;
+    }
+
+    public void sumarDiaLaboral() 
+    {
+        this.jornadaLaboral++;
+    }
+
+
 }
