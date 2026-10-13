@@ -38,4 +38,10 @@ public class Repartidor
         this.marcaAnunciada = marcaAnunciada;
     }
 
+    @Override
+    public String toString() 
+    {
+        return " [Seguro Social : " + seguroSocial + " Marca: " + marcaAnunciada + " Días Registrados: " + jornadaLaboral + "]";
+    }
+
 }
