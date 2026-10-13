@@ -33,5 +33,9 @@ public class Repartidor
         this.jornadaLaboral++;
     }
 
+    public void setMarcaAnunciada(String marcaAnunciada) 
+    {
+        this.marcaAnunciada = marcaAnunciada;
+    }
 
 }
