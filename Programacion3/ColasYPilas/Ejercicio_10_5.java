@@ -2,6 +2,7 @@ package Programacion3.ColasYPilas;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
 
 public class Ejercicio_10_5 
 {
@@ -9,6 +10,8 @@ public class Ejercicio_10_5
     {
         Queue<String> colaSeguroSocial = new LinkedList<>();
         Queue<String> colaMarca = new LinkedList<>();
+        Scanner sc = new Scanner(System.in);
+        LinkedList<Repartidor> basePersonal = new LinkedList<>(); //lista enlazada
         
 
     }
