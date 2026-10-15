@@ -13,8 +13,8 @@ public class Ejercicio_10_5
         Scanner sc = new Scanner(System.in);
         LinkedList<Repartidor> basePersonal = new LinkedList<>(); //lista enlazada
         
-        basePersonal.add(new Repartidor("999-111", "Comercial X", 2));
-        basePersonal.add(new Repartidor("888-222", "Publicidad Y", 4));
+        basePersonal.add(new Repartidor("999-111", "Tienda 1", 2));
+        basePersonal.add(new Repartidor("888-222", "Tienda 2", 4));
 
         String numeroNss;
         do {
