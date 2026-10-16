@@ -66,7 +66,7 @@ public class TomaDePedidos
 
                     break;
                 case 2:
-                    System.out.println("\n--- PLATOS EN EL PEDIDO ---");
+                    System.out.println("\n========== PLATOS EN EL PEDIDO ==========");
                     if (pedido.isEmpty()) {
                         System.out.println("El pedido esta vacio.");
                     } else {
@@ -95,12 +95,49 @@ public class TomaDePedidos
                         System.out.println("El plato NO esta en tu pedido.");
                     }
                     break;
+                case 4:
+                    System.out.print("\n ========== Eliminar plato del pedido =========="
+                                    + " \n 1. Por numero de posiscion"
+                                    + " \n 2. Por nombre del plato"
+                                    + " \n Eligue una opcion: "
+                    );
+
+                    int opcionEliminar = sc.nextInt();
+                    sc.nextLine();
+
+                    switch (opcionEliminar) {
+                        case 1:
+                            System.out.print("Ingresa el numero del plato a eliminar: ");
+                            int pos = sc.nextInt();
+                            sc.nextLine();
+                            if (pos > 0 && pos <= pedido.size()) {
+                                String eliminado = pedido.remove(pos - 1);
+                                System.out.println("Se elimino correctamente: " + eliminado);
+                            } else {
+                                System.out.println("Posicion no valida.");
+                            }
+                            break;
+                        case 2:
+                            System.out.print("Ingresa el nombre del plato a eliminar: ");
+                            String nombreEliminar = sc.nextLine();
+                            if (pedido.remove(nombreEliminar)) {
+                                System.out.println("Se elimino correctamente el plato: " + nombreEliminar);
+                            } else {
+                                System.out.println("No se encontro ese plato en tu pedido.");
+                            }
+                            break;
+                        default:
+                            System.out.println("Opcion de eliminacion invalida.");
+                            break;
+                    }
+
+                    break;
             
                 default:
                     break;
             }
 
-        }while 
+        }while (opcion != 7); 
         
         
     }
