@@ -27,15 +27,50 @@ public class TomaDePedidos
             System.out.println("\n========== MENU DE SANTO PECADO ==========");
             System.out.println("\n1. Agregar plato"
                             + "\n2. Ver pedido actual"
-                            + "\n3. Buscar plato en el menu"
-                            + "\n4. Verificar si un plato esta en tu pedido"
-                            + "\n5. Eliminar plato por posicion o nombre"
-                            + "\n6. Opciones avanzadas de memoria"
-                            + "\n7. Vaciar todo el pedido"
-                            + "\n8. Salir"
+                            + "\n3. Verificar si un plato esta en tu pedido"
+                            + "\n4. Eliminar plato por posicion o nombre"
+                            + "\n5. Opciones avanzadas de memoria"
+                            + "\n6. Vaciar todo el pedido"
+                            + "\n7. Salir"
                             + "\nElige una opcion: ");
 
-        }
+            opcion = sc.nextInt();
+            sc.nextLine();
+
+            switch (opcion)
+            {
+                case 1:
+                    System.out.println("=========== Platos Disponibles ==========");
+                    for (int i = 0; i < platos.size(); i++) {
+                        System.out.println((i + 1) + ". " + platos.get(i));
+
+                    }
+                    System.out.print("\nEscribe el nombre del plato que quieres pedir: ");
+
+                    String platoElegido = sc.nextLine();
+                    boolean encontrado = false;
+
+                    for (int i = 0; i < platos.size(); i++) {
+                        if (platoElegido.equalsIgnoreCase(platos.get(i))) {
+                            encontrado = true;
+                            break;
+                        }
+                    }
+
+                    if (encontrado) {
+                        pedido.add(platoElegido);
+                        System.out.println("¡Plato agregado con exito!");
+                    } else {
+                        System.out.println("El plato no esta disponible en la lista.");
+                    }
+
+                    break;
+            
+                default:
+                    break;
+            }
+
+        }while 
         
         
     }
