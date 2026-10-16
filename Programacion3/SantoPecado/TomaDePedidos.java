@@ -65,6 +65,20 @@ public class TomaDePedidos
                     }
 
                     break;
+                case 2:
+                    System.out.println("\n--- PLATOS EN EL PEDIDO ---");
+                    if (pedido.isEmpty()) {
+                        System.out.println("El pedido esta vacio.");
+                    } else {
+                        System.out.println("Total de platos en el pedido: " + pedido.size());
+                        for (int i = 0; i < pedido.size(); i++) {
+                            System.out.println((i + 1) + ". " + pedido.get(i));
+                        }
+                    }
+                    break;
+                case 3:
+                    
+                    break;
             
                 default:
                     break;
