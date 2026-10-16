@@ -8,61 +8,34 @@ public class TomaDePedidos
     {
 
         List<String> pedido = new ArrayList<>();
-
+        List<String> platos = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
+
+        platos.add("Salchipapa Morronga");
+        platos.add("Salchipapa Bochinchera");
+        platos.add("Hamburguesa jovita");
+        platos.add("hamburguesa gaucha");
+        platos.add("Perro sencillo");
+        platos.add("Perro chespirito");
 
         int opcion = 0;
 
 
-        do
-        {
+        
+        do{
 
-            System.out.print("\n====== MENU DE SANTO PECADO ======"
-                            + "\n 1. Salchipapas"
-                            + "\n 2. Hamburguesas"
-                            + "\n 3. Perros"
-                            + "\n 4. Gaseosa"
-                            + "\n 5. finalizar pedido"
-                            + "\n ¿Que desea el dia de hoy?: "
-            );
+            System.out.println("\n========== MENU DE SANTO PECADO ==========");
+            System.out.println("\n1. Agregar plato"
+                            + "\n2. Ver pedido actual"
+                            + "\n3. Buscar plato en el menu"
+                            + "\n4. Verificar si un plato esta en tu pedido"
+                            + "\n5. Eliminar plato por posicion o nombre"
+                            + "\n6. Opciones avanzadas de memoria"
+                            + "\n7. Vaciar todo el pedido"
+                            + "\n8. Salir"
+                            + "\nElige una opcion: ");
 
-            opcion = sc.nextInt(); 
-
-             switch (opcion) {
-                case 1:
-                    System.out.println("\n 1. la morronga .... " 
-                                     + "\n 2. La bochinchera .... "
-                                     + "\n 3. La belleza .... "
-                    );
-                    break;
-                case 2:
-                    System.out.println("\n 1. Street burguer .... "
-                                      +"\n 2. Gaucha .... "
-                                      +"\n 3. Jovita .... "
-                    );
-                    break;
-                case 3:
-                    System.out.println();
-                    break;
-                case 4:
-                    System.out.println();
-                    break;
-                case 5:
-                    System.out.println();
-                    break;
-                case 6:
-                    System.out.println();
-                    break;
-                case 7:
-                    System.out.println("gracias por su visita");
-                    break;
-                default:
-                    System.out.println("Opcion invalida");
-                    
-            }
-         
-
-        }while();
+        }
         
         
     }
