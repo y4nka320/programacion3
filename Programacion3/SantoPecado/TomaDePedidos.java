@@ -77,7 +77,23 @@ public class TomaDePedidos
                     }
                     break;
                 case 3:
-                    
+                    System.out.print("Escribe el plato que quieres verificar si esta en tu pedido: ");
+                    String verificar = sc.nextLine();
+                    encontrado = false;
+
+                    for (int i = 0; i < pedido.size(); i++) {
+                        if (verificar.equalsIgnoreCase(pedido.get(i))) {
+                            encontrado = true;
+                            break;
+                        }
+                    }
+
+                    if (encontrado) {
+                        System.out.println("El plato que ingresaste SI se encuentra en tu pedido.");
+                        System.out.println("Numero del plato en el pedido: " + (pedido.indexOf(verificar) + 1));
+                    } else {
+                        System.out.println("El plato NO esta en tu pedido.");
+                    }
                     break;
             
                 default:
