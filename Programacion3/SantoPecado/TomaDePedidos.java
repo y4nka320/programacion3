@@ -31,7 +31,8 @@ public class TomaDePedidos
                             + "\n4. Eliminar plato por posicion o nombre"
                             + "\n5. cancelar el pedido"
                             + "\n6. cambiar plato"
-                            + "\n7. Salir"
+                            + "\n7. imprimri comanda para cocina"
+                            + "\n8. Salir"
                             + "\nElige una opcion: ");
 
             opcion = sc.nextInt();
@@ -79,20 +80,12 @@ public class TomaDePedidos
                 case 3:
                     System.out.print("Escribe el plato que quieres verificar si esta en tu pedido: ");
                     String verificar = sc.nextLine();
-                    encontrado = false;
-
-                    for (int i = 0; i < pedido.size(); i++) {
-                        if (verificar.equalsIgnoreCase(pedido.get(i))) {
-                            encontrado = true;
-                            break;
-                        }
-                    }
-
-                    if (encontrado) {
-                        System.out.println("El plato que ingresaste SI se encuentra en tu pedido.");
+                   
+                    if (pedido.contains(verificar)){
+                        System.out.println("El plato que ingresaste SI se emcuemtra en tu pedido");
                         System.out.println("Numero del plato en el pedido: " + (pedido.indexOf(verificar) + 1));
                     } else {
-                        System.out.println("El plato NO esta en tu pedido.");
+                        System.out.println("El plato NO esta en tu pedido");
                     }
                     break;
                 case 4:
@@ -146,7 +139,7 @@ public class TomaDePedidos
                             System.out.println((i + 1) + ". " + pedido.get(i));
                         }
 
-                        System.out.print("Ingrese el numero del plato que desea cambiar");
+                        System.out.print("Ingrese el numero del plato que desea cambiar: ");
                         int modificarindi = sc.nextInt();
                         sc.nextLine();
 
@@ -168,15 +161,14 @@ public class TomaDePedidos
                             } 
                             
                             if (platoValido) {
-                                // AQUÍ SE APLICA EL MÉTODO .set()
-                                // Recordar que las listas empiezan en 0, por eso se resta 1 al índice ingresado
+                               
                                 String platoAnterior = pedido.set(modificarindi - 1, nuevoPlato);
                                 
                                 System.out.println("¡Plato actualizado con éxito!");
                                 System.out.println("Se cambió '" + platoAnterior + "' por '" + nuevoPlato + "'.");
                             } else {
                                 System.out.println("El plato ingresado no existe en el menú de Santo Pecado.");
-                            }
+                            } 
                         } else {
                             System.out.println("Número de posición inválido.");
 
@@ -185,6 +177,14 @@ public class TomaDePedidos
                     }
                     break;
                 case 7:
+                    System.out.println(" =========== Comanda para cocina ========== ");
+                    if(pedido.isEmpty()){
+                        System.out.println(" aun no se ha registrado el pedido");
+                    } else {
+                        System.out.println(" cocinar: " + pedido.toString());
+                    }
+                    break;
+                case 8:
                     System.out.println("Gracias por visitar Santo Pecado");
                     break;
             
@@ -193,7 +193,7 @@ public class TomaDePedidos
                     break;
             }
 
-        }while (opcion != 7 ); 
+        }while (opcion != 8 ); 
         
         sc.close();
     }
