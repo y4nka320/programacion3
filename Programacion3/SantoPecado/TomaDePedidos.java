@@ -30,7 +30,8 @@ public class TomaDePedidos
                             + "\n3. Verificar si un plato esta en tu pedido"
                             + "\n4. Eliminar plato por posicion o nombre"
                             + "\n5. cancelar el pedido"
-                            + "\n6. Salir"
+                            + "\n6. cambiar plato"
+                            + "\n7. Salir"
                             + "\nElige una opcion: ");
 
             opcion = sc.nextInt();
@@ -137,6 +138,53 @@ public class TomaDePedidos
                     System.out.println("¡Se ha vaciado todo el pedido con exito!");
                     break;
                 case 6:
+                    System.out.println("\n ========= modificar plato del pedido ==========");
+                    if (pedido.isEmpty()){
+                        System.out.println("aun no hay pedido, no se puede modificar");
+                    } else {
+                        for (int i = 0; i < pedido.size(); i++) {
+                            System.out.println((i + 1) + ". " + pedido.get(i));
+                        }
+
+                        System.out.print("Ingrese el numero del plato que desea cambiar");
+                        int modificarindi = sc.nextInt();
+                        sc.nextLine();
+
+                        if ( modificarindi > 0 && modificarindi <= pedido.size()){
+                            System.out.println("Platos disponibles del menu");
+                            for (int i = 0; i < platos.size(); i++) {
+                                System.out.println((i + 1) + ". " + platos.get(i));
+                            }
+
+                            System.out.print("Ingresa el nombre del nuevo plato: ");
+                            String nuevoPlato = sc.nextLine();
+
+                            boolean platoValido = false;
+                            for (int i = 0; i < platos.size(); i++) {
+                                if (nuevoPlato.equalsIgnoreCase(platos.get(i))) {
+                                    platoValido = true;
+                                    break;
+                                }
+                            } 
+                            
+                            if (platoValido) {
+                                // AQUÍ SE APLICA EL MÉTODO .set()
+                                // Recordar que las listas empiezan en 0, por eso se resta 1 al índice ingresado
+                                String platoAnterior = pedido.set(modificarindi - 1, nuevoPlato);
+                                
+                                System.out.println("¡Plato actualizado con éxito!");
+                                System.out.println("Se cambió '" + platoAnterior + "' por '" + nuevoPlato + "'.");
+                            } else {
+                                System.out.println("El plato ingresado no existe en el menú de Santo Pecado.");
+                            }
+                        } else {
+                            System.out.println("Número de posición inválido.");
+
+
+                        }
+                    }
+                    break;
+                case 7:
                     System.out.println("Gracias por visitar Santo Pecado");
                     break;
             
@@ -145,7 +193,7 @@ public class TomaDePedidos
                     break;
             }
 
-        }while (opcion != 6 ); 
+        }while (opcion != 7 ); 
         
         sc.close();
     }
