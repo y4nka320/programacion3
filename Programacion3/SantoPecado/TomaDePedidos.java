@@ -25,7 +25,7 @@ public class TomaDePedidos
         do{
 
             System.out.println("\n========== MENU DE SANTO PECADO ==========");
-            System.out.println("\n1. Agregar plato"
+            System.out.print("\n1. Agregar plato"
                             + "\n2. Ver pedido actual"
                             + "\n3. Verificar si un plato esta en tu pedido"
                             + "\n4. Eliminar plato por posicion o nombre"
@@ -91,7 +91,7 @@ public class TomaDePedidos
                     break;
                 case 4:
                     System.out.print("\n ========== Eliminar plato del pedido =========="
-                                    + " \n 1. Por numero de posiscion"
+                                    + " \n 1. Por numero de plato"
                                     + " \n 2. Por nombre del plato"
                                     + " \n Eligue una opcion: "
                     );
@@ -108,7 +108,7 @@ public class TomaDePedidos
                                 String eliminado = pedido.remove(pos - 1);
                                 System.out.println("Se elimino correctamente: " + eliminado);
                             } else {
-                                System.out.println("Posicion no valida.");
+                                System.out.println("numero no valido.");
                             }
                             break;
                         case 2:
@@ -129,7 +129,7 @@ public class TomaDePedidos
 
                 case 5:
                     pedido.clear();
-                    System.out.println("¡Se ha vaciado todo el pedido con exito!");
+                    System.out.println("¡Se ha cancelado el pedido con exito!");
                     break;
                 case 6:
                     System.out.println("\n ========= modificar plato del pedido ==========");
@@ -171,7 +171,7 @@ public class TomaDePedidos
                                 System.out.println("El plato ingresado no existe en el menú de Santo Pecado.");
                             } 
                         } else {
-                            System.out.println("Número de posición inválido.");
+                            System.out.println("Número de plato inválido.");
 
 
                         }
