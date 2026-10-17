@@ -29,9 +29,8 @@ public class TomaDePedidos
                             + "\n2. Ver pedido actual"
                             + "\n3. Verificar si un plato esta en tu pedido"
                             + "\n4. Eliminar plato por posicion o nombre"
-                            + "\n5. Opciones avanzadas de memoria"
-                            + "\n6. Vaciar todo el pedido"
-                            + "\n7. Salir"
+                            + "\n5. cancelar el pedido"
+                            + "\n6. Salir"
                             + "\nElige una opcion: ");
 
             opcion = sc.nextInt();
@@ -132,14 +131,23 @@ public class TomaDePedidos
                     }
 
                     break;
+
+                case 5:
+                    pedido.clear();
+                    System.out.println("¡Se ha vaciado todo el pedido con exito!");
+                    break;
+                case 6:
+                    System.out.println("Gracias por visitar Santo Pecado");
+                    break;
             
                 default:
+                    System.out.println("Opcion invalida, porfavor ingresa de nuevo");
                     break;
             }
 
-        }while (opcion != 7); 
+        }while (opcion != 6 ); 
         
-        
+        sc.close();
     }
 
 }
