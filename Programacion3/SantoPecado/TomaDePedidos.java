@@ -32,7 +32,8 @@ public class TomaDePedidos
                             + "\n5. cancelar el pedido"
                             + "\n6. cambiar plato"
                             + "\n7. imprimri comanda para cocina"
-                            + "\n8. Salir"
+                            + "\n8. aplicar Gran oferton"
+                            + "\n9. Salir"
                             + "\nElige una opcion: ");
 
             opcion = sc.nextInt();
@@ -185,6 +186,24 @@ public class TomaDePedidos
                     }
                     break;
                 case 8:
+                    System.out.println(" ========== ¡GRAN OFERTON! ==========");
+                  
+                    List<String> comboEspecial = new ArrayList<>();
+                    comboEspecial.add("Salchipapa morronga");
+                    comboEspecial.add("Hamburguesa jovita");
+                    
+                    System.out.println("Para llevarte el descuento del gran oferton, debes haber pedido:");
+                    for (int i = 0; i < comboEspecial.size(); i++) {
+                        System.out.println("- " + comboEspecial.get(i));
+                    }
+                    
+                    if (pedido.containsAll(comboEspecial)) {
+                        System.out.println("\nGRAN OFERTON APLICADO, DISFRUTALO");
+                    } else {
+                        System.out.println("\nTu pedido aún no tiene todos los platos necesarios para el Combo Especial.");
+                    }
+                    break;
+                case 9:
                     System.out.println("Gracias por visitar Santo Pecado");
                     break;
             
@@ -193,7 +212,7 @@ public class TomaDePedidos
                     break;
             }
 
-        }while (opcion != 8 ); 
+        }while (opcion != 9 ); 
         
         sc.close();
     }
