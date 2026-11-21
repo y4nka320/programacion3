@@ -54,5 +54,30 @@ public class Estudiante extends Persona{
         }
     }
 
+    public void removerMateriaHistorial(String codigoMateria)
+    {
+        for (int i = historialMaterias.size() - 1; i >= 0; i--)
+        {
+            if (historialMaterias.get(i).getCodigo().equalsIgnoreCase(codigoMateria))
+            {
+                historialMaterias.remove(i);
+            }
+        }
+    }
+ 
+    public boolean tieneMateriaAprobada(String codigoMateria)
+    {
+        for (int i = 0; i < historialMaterias.size(); i++)
+        {
+            if (historialMaterias.get(i).getCodigo().equalsIgnoreCase(codigoMateria))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    
+
 }
 
