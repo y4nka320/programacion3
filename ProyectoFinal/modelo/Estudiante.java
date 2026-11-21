@@ -107,5 +107,69 @@ public class Estudiante extends Persona{
         return (contador > 0) ? (suma / contador) : 0.0;
     }
 
+    public double calcularPromedioAcumulado()
+    {
+        double suma = 0.0;
+        int contador = 0;
+        for (int i = 0; i < notas.length; i++)
+        {
+            for (int j = 0; j < notas[i].length; j++)
+            {
+                if (notas[i][j] != null)
+                {
+                    suma += notas[i][j];
+                    contador++;
+                }
+            }
+        }
+        return (contador > 0) ? (suma / contador) : 0.0;
+    }
+ 
+    public int contarAprobadas()
+    {
+        int aprobadas = 0;
+        for (int i = 0; i < notas.length; i++)
+        {
+            for (int j = 0; j < notas[i].length; j++)
+            {
+                if (notas[i][j] != null)
+                {
+                    aprobadas += (notas[i][j] >= 3.0) ? 1 : 0;
+                }
+            }
+        }
+        return aprobadas;
+    }
+ 
+    public int contarReprobadas()
+    {
+        int reprobadas = 0;
+        for (int i = 0; i < notas.length; i++)
+        {
+            for (int j = 0; j < notas[i].length; j++)
+            {
+                if (notas[i][j] != null)
+                {
+                    reprobadas += (notas[i][j] < 3.0) ? 1 : 0;
+                }
+            }
+        }
+        return reprobadas;
+    }
+ 
+    @Override
+    public void mostrarInformacion() {
+        double prom = calcularPromedioAcumulado();
+        String textoProm = (prom > 0.0) ? String.format("%.2f", prom) : "0.0 (sin notas aun)";
+        System.out.println("ID: " + getId()
+                        + "\nNombre: " + getNombre()
+                        + "\nEmail: " + getEmail()
+                        + "\nSemestre: " + semestre
+                        + "\nPromedio acumulado: " + textoProm
+                    );
+       
+    }
 }
+
+
 
