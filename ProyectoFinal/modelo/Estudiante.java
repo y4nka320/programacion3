@@ -77,7 +77,35 @@ public class Estudiante extends Persona{
         return false;
     }
 
-    
+    public void registrarNota(int numSemestre, int indiceMateria, Double nota)
+    {
+        int fila = numSemestre - 1;
+        if (fila >= 0 && fila < notas.length && indiceMateria >= 0 && indiceMateria < notas[fila].length)
+        {
+            notas[fila][indiceMateria] = nota;
+        }
+    }
+ 
+    public double calcularPromedioSemestre(int numSemestre)
+    {
+        int fila = numSemestre - 1;
+        if (fila < 0 || fila >= notas.length)
+        {
+            return 0.0;
+        }
+ 
+        double suma = 0.0;
+        int contador = 0;
+        for (int j = 0; j < notas[fila].length; j++)
+        {
+            if (notas[fila][j] != null)
+            {
+                suma += notas[fila][j];
+                contador++;
+            }
+        }
+        return (contador > 0) ? (suma / contador) : 0.0;
+    }
 
 }
 
