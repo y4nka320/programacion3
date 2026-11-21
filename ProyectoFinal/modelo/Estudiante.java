@@ -35,5 +35,24 @@ public class Estudiante extends Persona{
         return historialMaterias;
     }
 
+
+    public void agregarMateriaHistorial(Materia materia)
+    {
+        boolean existe = false;
+        for (int i = 0; i < historialMaterias.size(); i++)
+        {
+            if (historialMaterias.get(i).getCodigo().equalsIgnoreCase(materia.getCodigo()))
+            {
+                existe = true;
+                break;
+            }
+        }
+ 
+        if (!existe)
+        {
+            historialMaterias.add(materia);
+        }
+    }
+
 }
 
