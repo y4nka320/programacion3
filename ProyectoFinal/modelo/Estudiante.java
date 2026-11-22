@@ -3,8 +3,8 @@ package ProyectoFinal.modelo;
 import java.util.LinkedList;
 import java.util.List;
  
-public class Estudiante extends Persona{
-
+public class Estudiante extends Persona
+{
     private int semestre;
     private Double[][] notas = new Double[10][20];
     private List<Materia> historialMaterias = new LinkedList<>();
@@ -34,8 +34,7 @@ public class Estudiante extends Persona{
     {
         return historialMaterias;
     }
-
-
+ 
     public void agregarMateriaHistorial(Materia materia)
     {
         boolean existe = false;
@@ -53,7 +52,7 @@ public class Estudiante extends Persona{
             historialMaterias.add(materia);
         }
     }
-
+ 
     public void removerMateriaHistorial(String codigoMateria)
     {
         for (int i = historialMaterias.size() - 1; i >= 0; i--)
@@ -76,7 +75,7 @@ public class Estudiante extends Persona{
         }
         return false;
     }
-
+ 
     public void registrarNota(int numSemestre, int indiceMateria, Double nota)
     {
         int fila = numSemestre - 1;
@@ -106,7 +105,7 @@ public class Estudiante extends Persona{
         }
         return (contador > 0) ? (suma / contador) : 0.0;
     }
-
+ 
     public double calcularPromedioAcumulado()
     {
         double suma = 0.0;
@@ -158,7 +157,8 @@ public class Estudiante extends Persona{
     }
  
     @Override
-    public void mostrarInformacion() {
+    public void mostrarInformacion()
+    {
         double prom = calcularPromedioAcumulado();
         String textoProm = (prom > 0.0) ? String.format("%.2f", prom) : "0.0 (sin notas aun)";
         System.out.println("ID: " + getId()
