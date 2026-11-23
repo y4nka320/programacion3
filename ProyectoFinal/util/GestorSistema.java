@@ -35,8 +35,8 @@ public class GestorSistema
         this.campus = new Campus(edificios);
  
         // Carga automatica de estudiantes al iniciar el sistema
-        cargarEstudiantesCSV("/workspaces/programacion3_1/ProyectoFinal/estudiantes.csv");
-        cargarMateriasCSV("/workspaces/programacion3_1/ProyectoFinal/materias.csv");
+        cargarEstudiantesCSV("/workspaces/programacion3/ProyectoFinal/estudiantes.csv");
+        cargarMateriasCSV("/workspaces/programacion3/ProyectoFinal/materias.csv");
     }
  
     public void registrarEstudiante()
